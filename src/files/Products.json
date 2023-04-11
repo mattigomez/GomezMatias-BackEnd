@@ -1,0 +1,10 @@
+{
+	"title": "producto4",
+	"description": "asdasadas",
+	"code": 12234,
+	"price": 135,
+	"status": true,
+	"stock": 5,
+	"category": "usado",
+	"thumbnails": []
+}
