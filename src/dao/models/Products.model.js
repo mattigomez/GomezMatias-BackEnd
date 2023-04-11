@@ -3,13 +3,19 @@ const mongoose = require('mongoose')
 const collectionName = 'product'
 
 const collectionSchema = new mongoose.Schema({
-  name: String,
-  lastName: String,
-  email: {
-    type: String,
-    unique: true,
+  title: String,
+  code: {
+      type: String,
+      unique: true,
   },
-})
+  status: Boolean,
+  measurement: String,
+  thumbnails: String,
+  stock: Number,
+  price: Number,
+  description: String,
+  category: String
+});
 
 const Products = mongoose.model(collectionName, collectionSchema)
 
