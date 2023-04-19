@@ -8,10 +8,20 @@ class DbProductManager{
         return await Products.create(product)
     }
 
-    async getProducts(limit){
-        const products = await Products.find()
-        return limit ? products.slice(0,limit):products
-    }
+    async getProducts(limit, page, sort, query) {
+        const internalLimit = limit || 10;
+        const internalPage = page || 1;
+        let products;
+        if (sort) {
+            const options = {
+                page: internalPage,
+                limit: internalLimit,
+                sort: { price: sort },
+            };
+            products =  await Products.paginate(query? { category: query } : {}, options);
+        } else {
+            products =  await Products.paginate(query? { category: query } : {}, { limit: internalLimit, page: internalPage });
+        }}
 
     async getProductById(id){
         return await Products.findById(id)

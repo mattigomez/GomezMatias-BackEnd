@@ -1,10 +1,202 @@
-{
-	"title": "producto4",
-	"description": "asdasadas",
-	"code": 12234,
-	"price": 135,
-	"status": true,
-	"stock": 5,
-	"category": "usado",
-	"thumbnails": []
-}
+[
+    {
+        "title": "Mate Imperial De Alpaca Cincelado Premium Calabaza Cuero",
+        "description": "Con nuestras propias manos comenzamos a dar vida a tu mate, creando los detalles que lo harán irrepetible. No somos máquinas que hacemos mates. Su combinación única de estilo, materiales y cincelados garantizarán una obra única. Sin automatizaciones o estandarizaciones, buscamos originalidad en cada pieza, para que no haya un mate igual a otro. Es nuestra forma de trabajar.",
+        "code": "001",
+        "price": 16000,
+        "status": true,
+        "stock": 9,
+        "category": "mates",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_736009-MLA52051443535_102022-F.webp"]
+    },
+    {
+        "title": "Mate Camionero Uruguayo Personalizado Calabaza ",
+        "description": "Calabaza Brasileña de selección especial, virola de acero inoxidable pulida espejo, forrado en cuero vacuno legítimo natural, producto 100% artesanal, costura fina con técnicas especiales",
+        "code": "002",
+        "price": 9300,
+        "status": true,
+        "stock": 13,
+        "category": "mates",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_915986-MLA52972800470_122022-F.webp"]
+    },
+    {
+        "title": "Mate Torpedo Virola De Alpaca De Calabaza",
+        "description": "Cada calabaza crece distinta, a su tiempo y a su forma. Más grandes, más pequeñas, más angostas o amplias; la naturaleza siempre crea y crea distinto. Al pasar los años tu palma desarrollará un vínculo único con aquella textura, con aquella forma, y cada nuevo encuentro con tu mate será un reencuentro con experiencias vividas, momentos guardados y sensaciones grabadas.",
+        "code": "003",
+        "price": 8150,
+        "status":true,
+        "stock": 11,
+        "category": "mates",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_700951-MLA52051408408_102022-F.webp"]
+    },
+    {
+        "title": "Bombilla De Alpaca Plana",
+        "description": "Alpaca maciza,filtro 4 líneas,caño 8mm, altura 18cm",
+        "code": "004",
+        "price": 2000,
+        "status":true,
+        "stock": 20,
+        "category": "mates",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_984924-MLA51231751060_082022-F.webp"]
+    },
+    {
+        "title": "Bombilla Pico Loro Alpaca Aplique Bronce Cincelada Paleta",
+        "description": "Bombilla pico loro de alpaca cincelada + Aplique de bronce (detalle)",
+        "code": "005",
+        "price": 3500,
+        "status":true,
+        "stock": 25,
+        "category": "mates",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_604868-MLA52765953448_122022-F.webp"]
+    },
+    {
+        "title": "Mate Camionero Uruguayo Cincelado + Bombilla Pico Loro Inox",
+        "description": "Camionero uruguayo virola Aluminio cincelada + Pico de loro acero INOX, colores: Negro, Marrón y Suela",
+        "code": "006",
+        "price": 7750,
+        "status":true,
+        "stock": 5,
+        "category": "mates",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_886076-MLA51096939193_082022-F.webp"]
+    },
+    {
+        "title": "Combo Mate Stanley 236ml + Bombilla Stanley Classic Spoon",
+        "description": "El mate Stanley mantiene la temperatura durante toda la cebada.Alto: 11 cm, diámetro: 10 cm. Aptos para lavavajillas, acero inoxidable",
+        "code": "007",
+        "price": 20000,
+        "status":true,
+        "stock": 3,
+        "category": "mates",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_640277-MLA50615910873_072022-O.webp"]
+    },
+    {
+        "title": "Termo Lumilagro Luminox de acero inoxidable 1 Lts.",
+        "description": "El diseño y la practicidad de los productos Lumilagro demuestran una esmerada combinación entre experiencia e innovación permanente. La calidad de este termo te brinda confianza y se va a transformar en el compañero ideal de tardes de estudio o juntadas con amigos.",
+        "code":"008",
+        "price": 9800,
+        "status":true,
+        "stock": 9,
+        "category": "termos",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_946759-MLA42441068380_072020-F.webp"]
+    },
+    {
+        "title": "Termo Montagne Bala 1 Lts. ",
+        "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
+        "code": "009",
+        "price": 14250,
+        "status":true,
+        "stock": 8,
+        "category": "termos",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_870355-MLA40305019466_012020-F.webp"]
+    },
+    {
+        "title": "Termo Stanley Clásico 1.4 Lts.",
+        "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
+        "code":"010",
+        "price": 18750,
+        "status":true,
+        "stock": 14,
+        "category": "termos",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_689503-MLA42454895011_072020-F.webp"]
+    },
+    {
+        "title": "Termo Acero Inoxidable Lusqtoff Frio Y Calor 1 Lts.",
+        "description": "¿Necesitás el complemento perfecto para tu kit matero? Experimentá la calidad de este termo Lüsqtoff con el que vas a poder disfrutar de cualquier infusión. Llevalo a donde quieras y tené listo tu café, té, o jugo rápidamente.",
+        "code":"011",
+        "price": 12500,
+        "status":true,
+        "stock": 7,
+        "category": "termos",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_738534-MLA48211917261_112021-F.webp"]
+    },
+    {
+        "title": "Termo Waterdog OBUS de acero inoxidable 1 Lts.",
+        "description": "¿Necesitás el complemento perfecto para tu kit matero? Experimentá la calidad de este termo Waterdog con el que vas a poder disfrutar de cualquier infusión. Llevalo a donde quieras y tené listo tu café, té, o jugo rápidamente.",
+        "code":"012",
+        "price": 15250,
+        "status":true,
+        "stock": 10,
+        "category": "termos",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_652168-MLA42441364140_072020-F.webp"]
+    },
+    {
+        "title": "Pico tapón cebador repuesto para termo Stanley",
+        "description": "Pico tapón cebador para Termo Stanley classic de 1L, 1.9L y 750ml, repuesto original.",
+        "code":"013",
+        "price": 1800,
+        "status":true,
+        "stock": 30,
+        "category": "accesorios",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_658220-MLA51233212719_082022-F.webp"]
+    },
+    {
+        "title": "Canasta matera portatermo cuero",
+        "description": "Canasta matera de cuero vacuno porta tu equipo de mate completo. Con división interna costuras en hilo tiento y terminaciones cinceladas.",
+        "code":"014",
+        "price": 9300,
+        "status":true,
+        "stock": 8,
+        "category": "accesorios",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_660592-MLA52769079087_122022-F.webp"]
+    },
+    {
+        "title": "Yerbera de cuero premium tipo bolsillo",
+        "description": "Capacidad 250gramos, flexible, cierre, tipo bolsillo para transportar a todos lados",
+        "code":"015",
+        "price": 3900,
+        "status":true,
+        "stock": 5,
+        "category": "accesorios",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_891702-MLA51373550350_092022-F.webp"]
+    },
+    {
+        "title": "Mochila matera bolso morral porta termo",
+        "description": "La mochila matera urbana es el producto ideal para trasladar tu equipo de mate. Cuenta con un compartimiento principal para trasladar cómodamente tu termo, mate y yerbera, también tiene sujetador para bombilla. El interior está forrado en tela aislante. Las correas son cómodas y se pueden ajustar a tu medida. Te presentamos sus características",
+        "code":"016",
+        "price": 8200,
+        "status":true,
+        "stock": 2,
+        "category": "accesorios",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_775459-MLA51388857842_092022-F.webp"]
+    },
+    {
+        "title": "Porta termo rígido matero de cuero con división",
+        "description": "El portatermo rígido es cómodo para llevar tu termo, latas de yerba (y azucar si se desea), mate y bombilla. Tiene una división interna para que el termo no quede suelto. La correa es resistente. La tapa queda siempre agarrada a la cinta, por lo que no tenés que preocuparte por perderla. Si buscas un portatermo accesible y sencillo, ¡este es el producto para vos!",
+        "code":"017",
+        "price": 3600,
+        "status":true,
+        "stock": 5,
+        "category": "accesorios",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_777021-MLA42397066698_062020-F.webp"]
+    },
+    {
+        "title": "Tapon cebador repuesto de termo matero",
+        "description": "Tapon cebador adaptado para termos stanley y adventure de 1 y 1,4 Lts.",
+        "code":"018",
+        "price": 900,
+        "status":true,
+        "stock": 27,
+        "category": "accesorios",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_768490-MLA51482266631_092022-F.webp"]
+    },
+    {
+        "title": "Latas set matero",
+        "description": "Es un set de dos latas metálicas. Ambas con pico vertedor plastico. Tienen un diámetro de 9cm y su altura varia, una mide 10,5cm y la otra 13,5cm.",
+        "code":"019",
+        "price": 1500,
+        "status":true,
+        "stock": 10,
+        "category": "accesorios",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_855803-MLA47386793568_092021-F.webp"]
+    },
+    {
+        "title": "Set lata yerbera + azucarera con pico vertedor",
+        "description": "Set matero ideal para el hogar. Yerbera: 14cm x 8,5cm, azucarera: 10cm x 8,5cm",
+        "code":"020",
+        "price": 1300,
+        "status":true,
+        "stock": 12,
+        "category": "accesorios",
+        "thumbnails": ["https://http2.mlstatic.com/D_NQ_NP_2X_976635-MLA50532119250_062022-F.webp"]
+    }
+] 
