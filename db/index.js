@@ -9,7 +9,7 @@ const {
 const mongoConnect = async () => {
   try {
     await mongoose.connect(
-      `mongodb+srv://admin:admin@cluster0.djfkdgp.mongodb.net/?retryWrites=true&w=majority`
+      `mongodb+srv://admin:admin@cluster0.djfkdgp.mongodb.net/DB?retryWrites=true&w=majority`
     )
     console.log('db is connected')
   } catch (error) {
