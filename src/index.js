@@ -1,8 +1,8 @@
 const { Server } = require('socket.io');
-
 const app = require('./app');
 const { port } = require('./config/app.config');
 const DbMessageManager = require('./dao/dbMessageManager');
+
 
 const httpServer = app.listen(port, () => {
     console.log(`Server runing al port ${port}`);

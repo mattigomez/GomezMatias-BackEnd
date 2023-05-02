@@ -3,7 +3,6 @@ const socket = io();
 const swal = async () => {
     const chatTextBox = document.getElementById('chatTextBox');
     
-
     try {
         const result = await Swal.fire({
             title: 'Identificate',
