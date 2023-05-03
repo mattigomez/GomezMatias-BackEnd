@@ -5,6 +5,8 @@ const MongoStore = require('connect-mongo')
 const cookieParser = require('cookie-parser')
 const mongoConnect = require('../db')
 const router = require('./router')
+const initializePassport = require('./config/passport.config')
+const passport = require('passport')
 
 
 const app = express()
@@ -23,6 +25,10 @@ app.use(session({
     saveUninitialized: false
 
 }))
+
+initializePassport()
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.engine('handlebars', handlebars.engine())
 app.set('views', __dirname + '/views')
