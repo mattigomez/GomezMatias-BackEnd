@@ -1,8 +1,10 @@
 const passport = require ('passport')
 const local = require ('passport-local')
 const Users = require('../dao/models/Users.model')
+const GithubStrategy = require ('passport-github2')
 const { createHash } = require('../utils/cryptPassword.util')
 const { passwordValidate } = require('../utils/cryptPassword.util')
+
 
 const LocalStrategy = local.Strategy
 
@@ -51,6 +53,32 @@ const initializePassport = () => {
         }
     }))
 
+    passport.use('github', new GithubStrategy({
+        clientID: 'Iv1.222cde0f92763d95',
+        clientSecret: '9943ed504febae0036aea47fdfd4e60b958d0025',
+        callbackURL: 'http://localhost:3000/auth/githubcallback'
+    },async (accesToken, refreshToken,profile,done) => {
+        try {
+            console.log(profile)
+
+            const user = await Users.findOne({email: profile._json.email})
+
+            if(!user){ const newUserInfo = {
+                first_name: profile._json.name,
+                last_name: '',
+                email: profile._json.email,
+                password: ''
+            }
+            const newUser = await Users.create(newUserInfo)
+            return done(null,newUser)
+            }
+
+            done(null,user)
+
+        } catch (error) {
+            done(error)
+        }
+    }))
 
     passport.serializeUser((user,done) =>{
         done(null,user.id)
