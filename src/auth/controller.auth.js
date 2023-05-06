@@ -1,7 +1,5 @@
 const { Router } = require('express');
-const Users = require("../dao/models/Users.model");
-const { passwordValidate } = require("../utils/cryptPassword.util");
-const passport = require("passport");
+const passport = require('passport');
 
 const router = Router();
 
@@ -17,6 +15,7 @@ router.post('/',passport.authenticate('login',{failureRedirect: '/auth/faillogin
     };
     
     res.json({ status: 'success', message: 'sesion iniciada' });
+
     
   } catch (error) {
     console.log(error.message);
@@ -35,15 +34,14 @@ router.get('/githubcallback', passport.authenticate('github',{failureRedirect:'/
 router.get('/logout', (req,res) => {
     req.session.destroy(error => {
         if(error) return res.json({error})
-        res.redirect('/login')
-
+        res.redirect('/')
     })
 })
 
 router.get('/faillogin',(req,res) =>{
-  console.log('Fallo en la estrategia de registro')
-
-  res.json({error: 'Failed register'})
+  console.log('El usuario y la contraseña no coinciden')
+ 
+  res.json({ status: 'error', message: 'El usuario y la contraseña no coinciden' })
 })
 
 module.exports = router;

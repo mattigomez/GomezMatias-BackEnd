@@ -4,14 +4,21 @@
   <label for="">Usuario</label>
   <input type="email" name="email" />
 
-  <label for="">Password</label>
-  <input type="password" name="password" />
+  <label for="" >Password</label>
+  <input type="password" name="password" id="passwordLogin" />
 
   <button type="submit">Iniciar sesion</button>
 </form>
+
+<p id="error-login" style="color:red";></p>
+<div>
+  <p>¿No tiene una cuenta? <a href="/signup">Cree una.</a></p>
+</div>
 <br>
 <div>
   <a href="/auth/github"><button>Ingresar con GitHub</button></a>
 </div>
 
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/js/login.js"></script>

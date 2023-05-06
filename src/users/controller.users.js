@@ -6,6 +6,7 @@ const router = Router();
 router.post('/',passport.authenticate('register',{failureRedirect: '/users/failregister'}), async (req, res) => {
   try {
     res.status(201).json({ status: 'sucess', message: 'Usuario registrado' });
+    
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ status: 'error', error: 'Internal server error' });

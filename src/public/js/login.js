@@ -1,4 +1,5 @@
 const form = document.getElementById('loginForm')
+const passwordLogin = document.getElementById('passwordLogin')
 
 
 form.addEventListener('submit', e => {
@@ -22,6 +23,26 @@ form.addEventListener('submit', e => {
         body
     })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => redirect(data))
     .catch(error => console.log(error))
 })
+
+function redirect(data) {
+    if (data.status == 'success') {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Has ingresado con exito',
+            showConfirmButton: false,
+            timer: 1500,
+            didClose: () => {
+                location.href= '/'}
+          })
+      
+    } else {
+      const errorMessage = document.getElementById("error-login");
+      errorMessage.innerHTML = data.message;
+      passwordLogin.value = ""
+
+    }
+  }

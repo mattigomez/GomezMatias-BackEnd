@@ -24,3 +24,12 @@ form.addEventListener('submit', e => {
     .then(data => console.log(data))
     .catch(error => console.log(error))
 })
+
+/* const sweet = Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Usuario creado con éxito',
+    showConfirmButton: false,
+    timer: 1500
+  }) */
+
