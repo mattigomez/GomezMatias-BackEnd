@@ -59,7 +59,7 @@ const initializePassport = () => {
         callbackURL: 'http://localhost:3000/auth/githubcallback'
     },async (accesToken, refreshToken,profile,done) => {
         try {
-            console.log(profile)
+            /* console.log(profile) */
 
             const user = await Users.findOne({email: profile._json.email})
 
