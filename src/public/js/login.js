@@ -1,4 +1,4 @@
-const form = document.getElementById('loginForm')
+/* const form = document.getElementById('loginForm')
 const passwordLogin = document.getElementById('passwordLogin')
 
 
@@ -45,4 +45,4 @@ function redirect(data) {
       passwordLogin.value = ""
 
     }
-  }
+  } */

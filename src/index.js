@@ -1,27 +1,14 @@
-const { Server } = require('socket.io');
-const app = require('./app');
-const { port } = require('./config/app.config');
-const DbMessageManager = require('./dao/dbMessageManager');
+const app = require('./app')
+const httpServer = require('http').createServer(app)
+const socketIo = require('./socket')
+const io = socketIo(httpServer)
+const { port } = require('./config/app.config')
 
 
-const httpServer = app.listen(port, () => {
-    console.log(`Server runing al port ${port}`);
-});
+app.locals.io = io
 
-const io = new Server(httpServer);
 
-const Messages = new DbMessageManager();
-
-io.on('connection', socket => {
-    console.log(`Client connected with id: ${socket.id}`);
-
-    socket.on('newUser', async user => {
-        socket.broadcast.emit('userConnected', user);
-        socket.emit('messageLogs', await Messages.getMessages());
-    });
-
-    socket.on('message', async data => {
-        await Messages.addMessage(data);
-        io.emit('messageLogs', await Messages.getMessages());
-    });
+//servidor Sockets
+httpServer.listen(port, () => {
+  console.log(`server running at port ${port}`)
 })

@@ -1,4 +1,4 @@
-const form = document.getElementById('signupForm')
+/* const form = document.getElementById('signupForm')
 const userExist = document.getElementById('userExist')
 
 form.addEventListener('submit', e => {
@@ -43,7 +43,7 @@ function redirect(data) {
       
 
     }
-  }
+  } */
 /* const sweet = Swal.fire({
     position: 'center',
     icon: 'success',

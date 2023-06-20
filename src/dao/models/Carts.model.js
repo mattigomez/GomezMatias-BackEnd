@@ -1,18 +1,19 @@
 const mongoose = require('mongoose')
-
-const collectionName = 'cart'
+const Products = require('./Products.model')
+const collectionName = 'carts'
 
 const collectionSchema = new mongoose.Schema({
-  products: [
-      {
-          id: {
-              type: mongoose.Schema.Types.ObjectId,
-          },
-          quantity: Number
-      }
-  ]
+  productos: [{
+    product: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: Products
+    },
+    quantity: {
+      type: Number,
+      default: 1
+    }
+  }]
 })
 
-const Carts = mongoose.model(collectionName, collectionSchema)
-
-module.exports = Carts
+const Cart = mongoose.model(collectionName, collectionSchema)
+module.exports = Cart

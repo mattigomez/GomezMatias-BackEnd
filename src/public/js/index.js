@@ -1,4 +1,4 @@
-const socket = io();
+/* const socket = io();
 
 const swal = async () => {
     const chatTextBox = document.getElementById('chatTextBox');
@@ -50,4 +50,4 @@ const swal = async () => {
     }
 }
 
-swal();
+swal(); */

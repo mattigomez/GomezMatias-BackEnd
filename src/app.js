@@ -30,9 +30,13 @@ initializePassport()
 app.use(passport.initialize())
 app.use(passport.session())
 
-app.engine('handlebars', handlebars.engine())
-app.set('views', __dirname + '/views')
-app.set('view engine', 'handlebars')
+const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
+const hbs = handlebars.create({
+  handlebars: allowInsecurePrototypeAccess(require('handlebars')),
+  defaultLayout: 'main'
+});
+app.engine('handlebars', hbs.engine);
+app.set('views',__dirname + '/views')
 
 mongoConnect()
 router(app)

@@ -4,6 +4,7 @@ const Users = require('../dao/models/Users.model')
 const GithubStrategy = require ('passport-github2')
 const { createHash } = require('../utils/cryptPassword.util')
 const { passwordValidate } = require('../utils/cryptPassword.util')
+const usersCreate = require('../dao/users.dao')
 
 
 const LocalStrategy = local.Strategy
@@ -26,7 +27,7 @@ const initializePassport = () => {
                 email,
                 password: createHash(password)
               };
-            const newUser = await Users.create(newUserInfo);
+            const newUser = await usersCreate(newUserInfo);
 
             done(null,newUser)
 
@@ -69,7 +70,7 @@ const initializePassport = () => {
                 email: profile._json.email,
                 password: ''
             }
-            const newUser = await Users.create(newUserInfo)
+            const newUser = await usersCreate(newUserInfo)
             return done(null,newUser)
             }
 
@@ -84,8 +85,12 @@ const initializePassport = () => {
         done(null,user.id)
     })
     passport.deserializeUser(async(id,done) =>{
-        const user = await Users.findById(id)
-        done(null,user)
+        try {
+            const user = await Users.findById(id)
+            done(null,user)
+        } catch (error) {
+            console.error(error)
+        }
     })
 }
 

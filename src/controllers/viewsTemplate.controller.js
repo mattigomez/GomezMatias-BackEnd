@@ -1,4 +1,4 @@
-const {Router} = require('express');
+/* const {Router} = require('express');
 const publicAccess = require('../middlewares/publicAccess.middleware');
 const privateAccess = require('../middlewares/privateAccess.middleware');
 
@@ -17,4 +17,4 @@ router.get('/', privateAccess , (req, res) => {
     res.render('profile.handlebars',{ user })
 });  
 
-module .exports = router
+module .exports = router */
