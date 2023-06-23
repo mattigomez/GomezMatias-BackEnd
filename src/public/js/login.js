@@ -1,30 +1,34 @@
-/* const form = document.getElementById('loginForm')
-const passwordLogin = document.getElementById('passwordLogin')
+const form = document.getElementById('loginForm')
+  const passwordLogin = document.getElementById('passwordLogin')
 
-
-form.addEventListener('submit', e => {
+  form.addEventListener('submit', e => {
     e.preventDefault()
 
     const data = new FormData(form)
     const obj = {}
 
-    data.forEach((value,key) => obj[key] = value)
+    data.forEach((value, key) => (obj[key] = value))
 
-    const url = '/auth'
+    const url = '/api/login'
     const headers = {
-        'Content-Type': 'application/json'
-    }
-    const method = 'POST'
-    const body = JSON.stringify(obj)
+      'Content-type': 'application/json',
+  }
+  const method = 'POST'
+  const body = JSON.stringify(obj)
 
-    fetch(url,{
-        headers,
-        method,
-        body
-    })
-    .then(response => response.json())
-    .then(data => redirect(data))
-    .catch(error => console.log(error))
+  fetch(url, {
+    headers,
+    method,
+    body,
+  })
+  .then(response => response.json())
+  .then(data => redirect(data))
+  .then(() => {
+    window.location.href = '/api/dbProducts?limit=9';
+  })
+  .catch(error => console.log(error))
+  
+
 })
 
 function redirect(data) {
@@ -44,5 +48,4 @@ function redirect(data) {
       errorMessage.innerHTML = data.message;
       passwordLogin.value = ""
 
-    }
-  } */
+    }}

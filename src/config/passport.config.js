@@ -45,7 +45,9 @@ const initializePassport = () => {
                 return done(null,false)
             }
             
-            if(!passwordValidate(password, user))return done(null,false)
+            if(!passwordValidate(password, user)){
+                console.log('Contraseña incorrecta');
+                return done(null,false)}
 
             done(null,user)
 

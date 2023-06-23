@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
   }
 })
 
-router.post('/',passport.authenticate('login',{failureRedirect: '/login/faillogin'}),async (req, res) => {
+router.post('/',passport.authenticate('login',{failureRedirect: '/api/login/faillogin'}),async (req, res) => {
   try {
     if(!req.user) return res.status(401)
     .json({status:'error',error:'Usuario y contraseña no coinciden'})
