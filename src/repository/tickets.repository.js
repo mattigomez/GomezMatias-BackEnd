@@ -1,8 +1,10 @@
 const Tickets = require('../dao/models/Tickets.model')
 const Products = require('../dao/models/Products.model')
+const ErrorRepository = require('./errors.repository')
 
 
 class TicketsRepository{
+
 
   async processDataTicket(code, userEmail, cart) {
 
@@ -60,7 +62,7 @@ class TicketsRepository{
         unprocessedProducts.push(product);
       }
     } catch (error) {
-     console.error(error);
+      throw new ErrorRepository('Error al generar tickets', 400)
     } 
   }
 }

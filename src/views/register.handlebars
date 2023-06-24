@@ -1,29 +1,3 @@
-{{!-- <h2>Registro</h2>
-
-<form action="" id="signupForm">
-  <label for="">Nombre</label>
-  <input type="text" name="first_name" />
-
-  <label for="">Apellido</label>
-  <input type="text" name="last_name" />
-
-  <label for="">Email</label>
-  <input type="email" name="email" />
-
-  <label for="">Password</label>
-  <input type="password" name="password" />
-
-  <button type="submit">Crear usuario</button>
-
-</form>
-<p id="userExist" style="color:red"></p>
-<br>
-
-<a href="/">Regresar</a>
-
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="/js/signup.js"></script> --}}
-
 <div class="registerContain">
   <h2>Registro</h2>
 
@@ -45,35 +19,10 @@
 
   <button type="submit">Crear Usuario</button>
   </form>
+
+  <p id="userExist" style="color:red"></p>
+
 </div>
-<script>
-  const form = document.getElementById('signupForm')
 
-form.addEventListener('submit', e => {
-  e.preventDefault()
-
-  const data = new FormData(form)
-  const obj = {}
-
-  data.forEach((value, key) => (obj[key] = value))
-
-  const url = '/api/register'
-  const headers = {
-    'Content-Type': 'application/json',
-  }
-  const method = 'POST'
-  const body = JSON.stringify(obj)
-
-  fetch(url, {
-    headers,
-    method,
-    body,
-  })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .then(() => {
-        window.location.href = '/api/login';
-      })
-    .catch(error => console.log(error))
-})
-</script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/signup.js"></script>

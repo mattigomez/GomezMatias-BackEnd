@@ -6,6 +6,7 @@ const userAcces = require('../middlewares/userAccess.middleware')
 const saveProductInCar = require('../dao/carts.dao')
 const checkDataTicket = require('../dao/tickets.dao')
 const uuid = require('uuid')
+const ErrorRepository = require('../repository/errors.repository')
 
 const router = Router()
 
@@ -15,9 +16,10 @@ router.post('/', async (req, res) => {
     const newCart = await Cart.create({})
     console.log('Nuevo carrito creado:', newCart)
     res.status(201).json(newCart)
-  } catch (err) {
-    console.error(err)
-    res.status(500).json({ error: 'Error al crear un nuevo carrito' })
+  } catch (error) {
+    console.error(error)
+    // res.status(500).json({ error: 'Error al crear un nuevo carrito' })
+    next(error)
   }
 })
 
@@ -28,7 +30,8 @@ router.get('/:cid', userAcces, async (req, res) => {
       res.status(200).render('carts.handlebars', {cart});
     } catch (error) {
       console.log(error);
-      res.status(500).json({ error: 'Error al obtener el carrito' });
+      // res.status(500).json({ error: 'Error al obtener el carrito' });
+      next(new ErrorRepository('Error al mostrar el carrito', 400))
     }
   });
 
@@ -43,7 +46,8 @@ router.post('/:cartId/:productId',userAcces , async (req, res) => {
     res.status(200).redirect(req.header('Referer'))
   } catch (error) {
     console.log(error);
-    res.status(500).json({ error: 'Error al agregar producto al carrito' });
+    //res.status(500).json({ error: 'Error al agregar producto al carrito' });
+    next(error)
   }
 });
 
@@ -57,7 +61,8 @@ router.put('/:cid', async (req, res) => {
     res.json({ message: 'Cart updated', cart });
   } catch (error) {
     console.log(error);
-    res.status(500).json({ error: 'Error updating cart' });
+    //res.status(500).json({ error: 'Error updating cart' });
+    next(error)
   }
 });
 
@@ -72,7 +77,8 @@ router.put('/:cid/products/:pid', async (req, res) => {
     res.json({ message: 'Cart updated', cart });
   } catch (error) {
     console.log(error);
-    res.status(500).json({ error: 'Error updating cart' });
+    //res.status(500).json({ error: 'Error updating cart' });
+    next(error)
   }
 });
 
@@ -88,7 +94,8 @@ router.post('/:cid/products/:pid', async (req, res) => {
     .cid}`)
   } catch (error) {
     console.log(error);
-    res.status(500).json({ error: 'Error removing product from cart' });
+    //res.status(500).json({ error: 'Error removing product from cart' });
+    next(error)
   }
 });
 
@@ -101,7 +108,8 @@ router.delete('/:cid', async (req, res) => {
     res.json({ message: 'All products removed from cart', cart });
   } catch (error) {
     console.log(error);
-    res.status(500).json({ error: 'Error removing products from cart' });
+    //res.status(500).json({ error: 'Error removing products from cart' });
+    next(error)
   }
 });
 
@@ -129,7 +137,8 @@ router.get('/:cid/purchase',userAcces , async (req, res) => {
     }
   } catch (error) {
     console.error(error)
-    res.status(500).json({ error: 'Error al finalizar la compra' });
+    //res.status(500).json({ error: 'Error al finalizar la compra' });
+    next(error)
   }
 })
 

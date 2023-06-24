@@ -28,6 +28,5 @@
     "socket.io": "^4.6.1",
     "sweetalert2": "^11.7.5",
     "uuid": "^9.0.0"
-  },
-  "description": ""
+  }
 }

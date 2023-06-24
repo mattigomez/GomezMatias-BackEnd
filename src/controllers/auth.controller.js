@@ -3,18 +3,20 @@ const passport = require('passport');
 
 const router = Router();
 
-router.get('/', (req, res) => {
+router.get('/', (req, res,next) => {
   try {
     res.render('login.handlebars')
   } catch (error) {
-    res.status(400).json({error: error})
+    next(error)
   }
 })
 
-router.post('/',passport.authenticate('login',{failureRedirect: '/api/login/faillogin'}),async (req, res) => {
+router.post('/',passport.authenticate('login',{failureRedirect: '/api/login/faillogin'}),async (req, res,next) => {
   try {
-    if(!req.user) return res.status(401)
-    .json({status:'error',error:'Usuario y contraseña no coinciden'})
+    if(!req.user){
+      const error = error
+      return next(error)
+    }
 
     // Establecer una session con los datos del usuario autenticado
     req.session.user = {
@@ -31,13 +33,13 @@ router.post('/',passport.authenticate('login',{failureRedirect: '/api/login/fail
     
   } catch (error) {
     console.log(error.message);
-    res.status(500).json({ status: 'error', message: 'Internal Server Error' });
+    next(error)
   }
 });
 
 router.get('/github', passport.authenticate('github',{scope: ['user: email']}),async (req,res) =>{})
 
-router.get('/githubcallback', passport.authenticate('github',{failureRedirect:'login/faillogin'}),
+router.get('/githubcallback', passport.authenticate('github',{failureRedirect:'/api/login/faillogin'}),
     async(req,res) => {
       req.session.user = req.user
       res.redirect('/api/dbProducts?limit=9')

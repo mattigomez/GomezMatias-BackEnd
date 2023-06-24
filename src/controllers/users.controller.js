@@ -9,7 +9,7 @@ router.post('/',passport.authenticate('register',{failureRedirect: 'register/fai
     
   } catch (error) {
     console.log(error.message);
-    res.status(500).json({ status: 'error', error: 'Internal server error'});
+    next(error)
   }
 });
 
@@ -17,7 +17,7 @@ router.get('/',(req,res) => {
   try {
     res.render('register.handlebars')
   } catch (error) {
-    res.status(400).json({error: error})
+    next(error)
     
   }
 })

@@ -23,9 +23,6 @@ const form = document.getElementById('loginForm')
   })
   .then(response => response.json())
   .then(data => redirect(data))
-  .then(() => {
-    window.location.href = '/api/dbProducts?limit=9';
-  })
   .catch(error => console.log(error))
   
 
@@ -40,7 +37,7 @@ function redirect(data) {
             showConfirmButton: false,
             timer: 1500,
             didClose: () => {
-                location.href= '/'}
+              window.location.href = '/api/dbProducts?limit=9'}
           })
       
     } else {
