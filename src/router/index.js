@@ -4,6 +4,7 @@ const productsController = require('../controllers/products.controller')
 const cartsController = require('../controllers/carts.controller')
 const messagesController = require('../controllers/messages.controller')
 const sessionController = require('../controllers/session.controller')
+const loggerController = require('../controllers/logger.controller')
 const ErrorRepository = require('../repository/errors.repository')
 
 
@@ -24,6 +25,7 @@ const router = app => {
   app.use('/api/dbCarts', cartsController)
   app.use('/api/messages', messagesController)
   app.use('/api/sessions/current', sessionController)
+  app.use('/api/loggerTest', loggerController )
   app.use(errorHandler)
 }
 

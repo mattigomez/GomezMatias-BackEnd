@@ -1,0 +1,21 @@
+{"level":"info","message":"GET /","timestamp":"2023-06-29T22:46:24.168Z"}
+{"level":"info","message":"GET /api/loggertest","timestamp":"2023-06-29T22:46:36.135Z"}
+{"level":"info","message":"Testing - Info","timestamp":"2023-06-29T22:46:36.136Z"}
+{"level":"warning","message":"Testing - Warning","timestamp":"2023-06-29T22:46:36.137Z"}
+{"level":"debug","message":"Testing - Debug","timestamp":"2023-06-29T22:46:36.137Z"}
+{"level":"error","message":"Testing - Error","timestamp":"2023-06-29T22:46:36.137Z"}
+
+{"level":"info","message":"GET /api/login","timestamp":"2023-06-30T02:34:44.958Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-06-30T02:34:49.256Z"}
+{"level":"info","message":"GET /api/login/faillogin","timestamp":"2023-06-30T02:34:49.982Z"}
+{"level":"error","message":"Error al iniciar sesion","timestamp":"2023-06-30T02:34:49.983Z"}
+
+{"level":"info","message":"POST /api/login","timestamp":"2023-06-30T02:35:11.800Z"}
+{"_id":"64963911d881bb766bb34122","cartId":"64963910d881bb766bb34120","email":"asd@hotmail.com","first_name":"asd","last_name":"asd","level":"info","message":"sesion iniciada","role":"usuario","timestamp":"2023-06-30T02:35:12.726Z"}
+{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-06-30T02:35:15.064Z"}
+{"level":"info","message":"GET /api/register","timestamp":"2023-06-30T02:38:46.725Z"}
+{"level":"info","message":"POST /api/register","timestamp":"2023-06-30T02:38:52.028Z"}
+{"level":"info","message":"GET /api/register/failregister","timestamp":"2023-06-30T02:38:52.576Z"}
+{"level":"error","message":"El mail no esta disponible","timestamp":"2023-06-30T02:38:52.577Z"}
+{"level":"info","message":"POST /api/register","timestamp":"2023-06-30T02:40:33.522Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-06-30T02:40:37.339Z"}

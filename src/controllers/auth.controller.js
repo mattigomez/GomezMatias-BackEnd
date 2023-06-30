@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const passport = require('passport');
+const logger = require('../utils/logger.util')
 
 const router = Router();
 
@@ -28,11 +29,10 @@ router.post('/',passport.authenticate('login',{failureRedirect: '/api/login/fail
       cartId: req.user.cartId
     };
     
+    logger.info('sesion iniciada' , req.session.user)
     res.status(200).json({ status: 'success', message: 'sesion iniciada' });
-
-    
   } catch (error) {
-    console.log(error.message);
+    logger.error('Error al iniciar sesion', error)
     next(error)
   }
 });
@@ -47,14 +47,16 @@ router.get('/githubcallback', passport.authenticate('github',{failureRedirect:'/
 
 router.get('/logout', (req,res) => {
     req.session.destroy(error => {
-        if(error) return res.json({error})
+        if(error){
+          logger.error('Error al cerrar sesion', error)
+          return next(error)
+        }
         res.redirect('/api/login')
     })
 })
 
 router.get('/faillogin',(req,res) =>{
-  console.log('El usuario y la contraseña no coinciden')
- 
+  logger.error('Error al iniciar sesion')
   res.json({ status: 'error', message: 'El usuario y la contraseña no coinciden' })
 })
 

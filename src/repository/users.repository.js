@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt')
 const Users = require('../dao/models/Users.model')
 const Cart = require('../dao/models/Carts.model')
 const { admin_email, admin_password } = require('../config/admin.config')
-
+const ErrorRepository = require('../repository/errors.repository')
 
 class UserRepository {
 
@@ -10,6 +10,10 @@ class UserRepository {
     try {
       const {first_name,last_name,email,age,password} = userInfo
 
+       if(!userInfo){
+        console.log('faltan datos');
+        throw new ErrorRepository('Datos incorrectos, verifica que los campos no esten vacios!', 400)
+      }
       // Verificar si el usuario es admin y lo clasifica
       let role = 'usuario'
       // Comparar la contraseña ingresada con el hash almacenado en la variable admin_password

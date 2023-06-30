@@ -7,6 +7,7 @@ const mongoConnect = require('../db')
 const router = require('./router')
 const initializePassport = require('./config/passport.config')
 const passport = require('passport')
+const logger = require('./utils/logger.util')
 
 
 const app = express()
@@ -26,6 +27,10 @@ app.use(session({
 
 }))
 
+app.use((req, res, next) => {
+  logger.info(`${req.method} ${req.url}`)
+  next()
+})
 initializePassport()
 app.use(passport.initialize())
 app.use(passport.session())
