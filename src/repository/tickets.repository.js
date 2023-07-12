@@ -1,24 +1,21 @@
 const Tickets = require('../dao/models/Tickets.model')
 const Products = require('../dao/models/Products.model')
 const ErrorRepository = require('./errors.repository')
+const logger = require('../utils/logger.util')
 
 
 class TicketsRepository{
 
-
   async processDataTicket(code, userEmail, cart) {
-
 try {
   
       const processedProducts = []
       const unprocessedProducts = []
       let totalAmount = 0
-  
     
       for (let i = 0; i < cart.productos.length; i++) {
         const item = cart.productos[i];
-  
-        
+       
         const product = await this.processItem(item, processedProducts, unprocessedProducts)
         if (product) {
           const productQuantity = item.quantity;
@@ -29,7 +26,8 @@ try {
         }
       }
   
-      cart.productos = cart.productos.filter((item) => !processedProducts.some((processedItem) => processedItem._id.toString() === item.product._id.toString()));
+      cart.productos = cart.productos.filter(
+        (item) => !processedProducts.some((processedItem) => processedItem._id.toString() === item.product._id.toString()));
       await cart.save();
   
       const ticket = await Tickets.create({
@@ -39,13 +37,15 @@ try {
         purchaser: userEmail,
         processProducts: processedProducts
       });
-  
+      
+      logger.info('Ticket con los productos procesados', ticket)
       return {
         ticket: ticket,
         unprocessedProducts: unprocessedProducts
       }
     }
 catch (error) {
+  logger.error('Error al procesar los productos', error)
   throw new ErrorRepository('error al procesar tu compra', 400)
   
 }}
@@ -53,7 +53,6 @@ catch (error) {
   async processItem(item, processedProducts, unprocessedProducts) {
     const productId = item.product._id;
     const productQuantity = item.quantity
-
 
     try {
       const product = await Products.findById(productId);
@@ -67,10 +66,10 @@ catch (error) {
         unprocessedProducts.push(product);
       }
     } catch (error) {
+      logger.error('Error al buscar productos',error)
       throw new ErrorRepository('Error al generar tickets', 400)
     } 
   }
 }
-
 
 module.exports = TicketsRepository

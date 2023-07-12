@@ -2,6 +2,7 @@ const Products = require('../dao/models/Products.model')
 const Cart = require('../dao/models/Carts.model');
 const ErrorRepository = require('./errors.repository');
 const uuid = require('uuid')
+const logger = require('../utils/logger.util')
 
 
 class ProductsRepository {
@@ -64,10 +65,11 @@ class ProductsRepository {
         allowProtoPropertiesByDefault: true,
         allowProtoMethodsByDefault: true,
       }
-
+      logger.debug('Productos encontrados: ', productList)
 
       return productList
     } catch (error) {
+      logger.error('No se encontraron productos',error)
       throw new ErrorRepository(400)
     }
   }
@@ -92,9 +94,10 @@ class ProductsRepository {
     
         mockProducts.push(product);
       }
-    
+      logger.debug('Productos generados: ', mockProducts)
       return mockProducts;
     } catch (error) {
+      logger.error('Error al generar los productos',error)
       throw new ErrorRepository('Error al generar los productos', 400)
     }
   }
