@@ -8,7 +8,8 @@ const router = require('./router')
 const initializePassport = require('./config/passport.config')
 const passport = require('passport')
 const logger = require('./utils/logger.util')
-
+const swaggerUiExpress = require('swagger-ui-express')
+const swaggerJSDoc = require('swagger-jsdoc')
 
 const app = express()
 
@@ -31,6 +32,21 @@ app.use((req, res, next) => {
   logger.info(`${req.method} ${req.url}`)
   next()
 })
+
+const swaggerOptions = {
+  definition: {
+    openapi: '3.0.1',
+    info: {
+      title: "Project Documentacion",
+      description: "Endpoints to Manager Products and carts in my ecommerce aplication."
+    }
+  },
+  apis: [`${__dirname.replace(/\\/g, '/')}/docs/**/*.yaml`]
+}
+
+const swaggerSpecs = swaggerJSDoc(swaggerOptions)
+app.use('/api-docs', swaggerUiExpress.serve, swaggerUiExpress.setup(swaggerSpecs))
+
 initializePassport()
 app.use(passport.initialize())
 app.use(passport.session())
