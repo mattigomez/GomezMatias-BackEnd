@@ -5,7 +5,7 @@ info:
 paths:
   /api/dbProducts:
     get:
-      summary: Obtiene una lista de todos los productos disponibles segun los filtros del usuario.
+      summary: Obtiene una lista de todos los productos disponibles
       tags:
         - Products
       responses:
@@ -20,7 +20,7 @@ paths:
         "500":
           description: Error al cargar los productos
     post:
-      summary: Agregar un nuevo producto a la base de datos.
+      summary: Agregar un nuevo producto 
       tags:
         - Products
       requestBody:
@@ -31,12 +31,12 @@ paths:
               $ref: "#/components/requestBodies/addProductDb"
       responses:
         "200":
-          description: Se agrego el producto a la db
+          description: Se agrego el producto con exito
         "400":
-          description: Error al agregar el producto a la db
+          description: Error al agregar el producto 
   /api/dbProducts/mockingProducts:
     get:
-      summary: Obtiene 100 productos de manera aleatoria con el mismo modelo de mongo.
+      summary: Obtiene 100 productos aleatorios 
       tags:
         - Products
       responses:
@@ -49,17 +49,17 @@ paths:
                 items:
                   $ref: "#/components/schemas/Product"
         "500":
-          description: Error al generar los productos
+          description: Error al obtener los productos
   /api/dbProducts/${productId}:
     put:
-      summary: Actualiza las propiedades de un productos en especifico.
+      summary: Actualiza las propiedades de un producto
       tags:
         - Products
       parameters:
         - name: productId
           in: path
           require: true
-          description: id del producto seleccionado por el usuario.
+          description: id del producto 
       requestBody:
         required: true
         content:
@@ -76,14 +76,14 @@ paths:
         "400":
           description: Error al actualizar las propiedades del producto
     delete:
-      summary: Elimina un producto en especifico.
+      summary: Elimina un producto 
       tags:
         - Products
       parameters:
         - name: productId
           in: path
           require: true
-          description: id del producto seleccionado por el usuario.
+          description: id del producto
       responses:
         "200":
           description: Producto eliminado con exito.
@@ -95,9 +95,6 @@ paths:
                   $ref: "#/components/schemas/Product"
         "500":
           description: Error al eliminar el producto
-
-
-
 
 components:
   schemas:
@@ -167,17 +164,17 @@ components:
           type: string
           description: rol del usuario que creo el producto
       example:
-        name: Detergente axion limon 1l.
-        description: Detergente para trates arranca grasa con aroma a limon
-        price: 78.00
-        stock: 100
-        code: 31f4-ef7h-df9f-24rd
-        category: limpieza
+        name: Stanley Termo Clásico 1 L de acero inoxidable
+        description: Conserva el agua fría y caliente hasta por 24 horas
+        price: 600
+        stock: 38
+        code: 39ir-3kxi-d35s-2c8a
+        category: termos
         status: true
-        img: https://firebasestorage/detergente.jpeg
+        img: https://http2.mlstatic.com/D_NQ_NP_2X_823713-MLA46192402341_052021-F.webp
         owner:
     updateProduct:
-      description: Body con la informacion necesaria para actualizar las propiedadesde un producto.
+      description: Body con la informacion necesaria para actualizar las propiedades  de un producto.
       properties:
         name:
           type: string
@@ -204,5 +201,5 @@ components:
           type: string
           description: url de la imagen descriptiva del producto
       example:
-        price: 100
-        img: https://firebasestorage/newDetergente.jpeg
+        price: 800
+        img: https://http2.mlstatic.com/D_NQ_NP_2X_715578-MLA51200864887_082022-F.webp

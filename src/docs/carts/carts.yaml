@@ -5,7 +5,7 @@ info:
 paths:
   /api/dbCarts:
     post:
-      summary: Crea un nuevo carrito vacio y sin enlazarlo al usuario.
+      summary: Crea un carrito.
       tags:
         - Carts
       responses:
@@ -20,14 +20,14 @@ paths:
           description: Internal Server Error
   /api/dbCarts/{cid}:
     get:
-      summary: Obtiene el carrito del usuario con los productos agregados.
+      summary: Obtiene el carrito
       tags:
         - Carts
       parameters:
         - name: uid
           in: path
           required: true
-          description: id del carrito enlazado con el usuario.
+          description: id del carrito
       responses:
         "200":
           description: Carrito obtenido con exito
@@ -39,13 +39,13 @@ paths:
         "404":
           description: Carrito no encontrado 
     put:
-      summary: Actualiza el carrito con un nuevo arreglo de productos
+      summary: Actualiza el carrito
       tags:
         - Carts
       parameters:
         - name: cid
           required: true
-          description: id del carrito a actualizar
+          description: id del carrito que se actualizara
       requestBody:
         required: true
         content:
@@ -80,19 +80,19 @@ paths:
           description: Error al eliminar los productos
   /api/dbCarts/${cartId}/${productId}:
     post:
-      summary: Introduce un producto en especifico al carrito del usuario.
+      summary: Agrega producto mediante su id al carrito
       tags:
         - Carts
       parameters:
         - name: cartId
           require: true
-          description: Id del carrito del usuario donde se va a guardar el producto.
+          description: Id del carrito
         - name: ProductId
           require: true
-          description: Id del producto que el usuario quiere agregar al carrito.
+          description: Id del producto
       responses:
         "200":
-          description: El producto fue agregado con exito al carrito.
+          description: El producto fue agregado con exito
           content:
             aplication/json:
               schema:
@@ -102,16 +102,16 @@ paths:
           description: Error al agregar el producto
   /api/dbCarts/${cid}/products/${pid}:
     put:
-      summary: Actualiza la cantidad de unidades de un producto en especifico
+      summary: Actualiza la cantidad de unidades de un producto
       tags:
         - Carts
       parameters:
         - name: cid
           require: true
-          description: Id del carrito del usuario.
+          description: Id del carrito
         - name: pid
           require: true
-          description: Id del producto que el usuario quiere actualizar su cantidad.
+          description: Id del producto
       requestBody:
         required: true
         content:
@@ -128,13 +128,13 @@ paths:
         "400":
           description: Error al actualizar la cantidad de unidades del producto
     post:
-      summary: Elimina un producto en especifico del carrito
+      summary: Elimina un producto del carrito
       tags:
         - Carts
       parameters:
         - name: cid
           require: true
-          description: Id del carrito del usuario.
+          description: Id del carrito 
         - name: pid
           require: true
           description: Id del producto que el usuario quiere eliminar.
@@ -146,10 +146,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/Cart"
         "400":
-          description: Error al eliminar el producto del carrito.
-
-
-
+          description: Error al eliminar el producto 
 
 components:
   schemas:
@@ -167,7 +164,7 @@ components:
                 description: ID del producto
               quantity:
                 type: number
-                description: Número de unidades del producto (por defecto es 1)
+                description: Número de unidades del producto
   requestBodies:
     updateProductsToCart:
       description: Body con la informacion necesaria para actualizar el arreglo de productos del carrito
@@ -187,16 +184,16 @@ components:
       example:
         productos: [
           {
-            product: 51hj3b45k13v45134ger,
-            quantity: 1
-          },
-          {
-            product: sdfgasdufnvb0s8ergv,
-            quantity: 4
-          },
-          {
-            product: ashdfd87wd8w233df3,
+            product: product1,
             quantity: 2
+          },
+          {
+            product: product2,
+            quantity: 3
+          },
+          {
+            product: product3,
+            quantity: 4
           }
         ]
     updateQuantityProduct:
@@ -206,4 +203,4 @@ components:
           type: number
           description: nueva cantidad de unidades a cambiar
       example:
-        quantity: 6
+        quantity: 9
