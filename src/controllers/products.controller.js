@@ -22,7 +22,7 @@ router.get('/', privateAccess, async (req, res, next) => {
     const products = await productSearch(req, message, cartId)
 
     logger.info('Productos agregados con exito',products)
-    res.render('products.handlebars', products);
+    res.status(200).render('products.handlebars', products);
   } catch (error) {
     logger.error('Error al agregar productos',error)
     next(error)
@@ -55,7 +55,7 @@ router.post('/', adminAccess , async (req, res, next) => {
     const newProduct = await Products.create(req.body)
     
     logger.info('Se agrego un producto a la db', newProduct)
-    res.json({message: newProduct})
+    res.status(200).json({message: newProduct})
 
   } catch (error) {
     logger.error('Error al agregar producto', error)
@@ -74,7 +74,7 @@ router.put('/:productId', adminAccess , async (req, res, next) => {
     const updatedProduct = await Products.findByIdAndUpdate(req.params.productId, req.body, { new: true })
 
     logger.info('Producto actualizado con exito', updatedProduct)
-    res.json({ message: 'Product updated successfully', product: updatedProduct })
+    res.status(200).json({ message: 'Product updated successfully', product: updatedProduct })
 
   } catch (error) {
     logger.error('Error al actualizar el producto')

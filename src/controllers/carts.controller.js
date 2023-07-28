@@ -15,7 +15,7 @@ router.post('/',userAccess, async (req, res,next) => {
   try {
     const newCart = await Cart.create({})
     logger.info('Nuevo carrito creado:', newCart)
-    res.status(201).json(newCart)
+    res.status(200).json(newCart)
   } catch (error) {
     logger.error('Error al crear un nuevo carrito', error)
     next(error)
@@ -62,7 +62,7 @@ router.put('/:cid',userAccess,async (req, res,next) => {
     const cart = await Cart.findById(req.params.cid);
     cart.productos = req.body.productos;
     await cart.save();
-    res.json({ message: 'Cart updated', cart });
+    res.status(200).json({ message: 'Cart updated', cart });
     logger.info('Carrito actualizado!', cart)
   } catch (error) {
     logger.error('Error actualizando cart', error)
@@ -80,7 +80,7 @@ router.put('/:cid/products/:pid', userAccess,async (req, res,next) => {
     item.quantity = req.body.quantity;
     await cart.save();
 
-    res.json({ message: 'Cart updated', cart });
+    res.status(200).json({ message: 'Cart updated', cart });
     logger.info('Cantidad de productos actualizada!', cart)
   } catch (error) {
     logger.error('Error actualizando cart', error)
@@ -99,7 +99,7 @@ router.post('/:cid/products/:pid', async (req, res,next) => {
     await cart.save();
 
     logger.info('Producto eliminado con exito!', cart)
-    res.redirect(`/api/dbCarts/${req.params.cid}`)
+    res.status(200).json('se elimino el producto')
 
   } catch (error) {
     logger.error('Error eliminando producto del cart', error)
@@ -115,7 +115,7 @@ router.delete('/:cid', async (req, res,next) => {
     await cart.save();
 
     logger.info('Productos eliminados con exito!', cart)
-    res.json({ message: 'Todos los productos fueron eliminados del cart', cart });
+    res.status(200).json({ message: 'Todos los productos fueron eliminados del cart', cart });
   } catch (error) {
     logger.error('Error eliminando todos los productos del cart', error)
     next(error)

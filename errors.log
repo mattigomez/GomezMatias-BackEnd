@@ -103,149 +103,53 @@
 {"level":"info","message":"GET /api/login/logout?","timestamp":"2023-07-12T04:08:50.397Z"}
 {"level":"info","message":"GET /api/login","timestamp":"2023-07-12T04:08:51.161Z"}
 {"level":"info","message":"GET /api/login/forgot-password","timestamp":"2023-07-12T04:08:53.914Z"}
-{"level":"info","message":"GET /api/register","timestamp":"2023-07-12T04:08:58.759Z"}
-{"level":"info","message":"POST /api/register","timestamp":"2023-07-12T04:09:43.896Z"}
-{"level":"info","message":"GET /api/register","timestamp":"2023-07-12T04:10:20.380Z"}
-{"level":"info","message":"POST /api/register","timestamp":"2023-07-12T04:10:25.803Z"}
-{"level":"info","message":"GET /api/register/failregister","timestamp":"2023-07-12T04:10:26.333Z"}
-{"level":"error","message":"El mail no esta disponible","timestamp":"2023-07-12T04:10:26.334Z"}
-{"level":"info","message":"GET /api/register","timestamp":"2023-07-12T04:10:36.151Z"}
-{"level":"info","message":"POST /api/register","timestamp":"2023-07-12T04:10:42.724Z"}
-{"level":"info","message":"POST /api/login","timestamp":"2023-07-12T04:11:05.119Z"}
-{"_id":"64ae2788a9c8992fee545ebd","cartId":"64ae2788a9c8992fee545ebb","email":"matti.gomez1997@gmail.com","first_name":"asd","last_name":"asd","level":"info","message":"sesion iniciada","role":"usuario","timestamp":"2023-07-12T04:11:06.001Z"}
-{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-07-12T04:11:08.330Z"}
-{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64ae2788a9c8992fee545ebb","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-12T04:11:09.323Z","title":"Lista de Productos","totalPages":1}
-{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64ae2788a9c8992fee545ebb","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-12T04:11:09.324Z","title":"Lista de Productos","totalPages":1}
-{"level":"info","message":"GET /api/login/forgot-password","timestamp":"2023-07-12T04:11:20.447Z"}
-{"level":"info","message":"POST /api/login/forgot-password","timestamp":"2023-07-12T04:11:29.328Z"}
-{"level":"info","message":"Token generado con exito","timestamp":"2023-07-12T04:11:29.837Z"}
-{"level":"info","message":"GET /api/login","timestamp":"2023-07-12T04:11:30.705Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:11:44.853Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:11:49.560Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:12:01.236Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:12:01.398Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:12:01.549Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:12:01.754Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:12:01.873Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:12:02.128Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:12:02.775Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:12:07.079Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:12:07.743Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:12:07.892Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:12:08.055Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:12:08.217Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:12:08.373Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:12:08.527Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:12:08.695Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:12:08.908Z"}
-{"level":"info","message":"GET /api/login","timestamp":"2023-07-12T04:12:12.263Z"}
-{"level":"info","message":"POST /api/login","timestamp":"2023-07-12T04:12:15.582Z"}
-{"level":"info","message":"GET /api/login/faillogin","timestamp":"2023-07-12T04:12:16.454Z"}
-{"level":"error","message":"Error al iniciar sesion","timestamp":"2023-07-12T04:12:16.702Z"}
-{"level":"info","message":"POST /api/login","timestamp":"2023-07-12T04:12:18.643Z"}
-{"_id":"64ae2788a9c8992fee545ebd","cartId":"64ae2788a9c8992fee545ebb","email":"matti.gomez1997@gmail.com","first_name":"asd","last_name":"asd","level":"info","message":"sesion iniciada","role":"usuario","timestamp":"2023-07-12T04:12:19.770Z"}
-{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-07-12T04:12:22.088Z"}
-{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64ae2788a9c8992fee545ebb","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-12T04:12:23.083Z","title":"Lista de Productos","totalPages":1}
-{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64ae2788a9c8992fee545ebb","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-12T04:12:23.083Z","title":"Lista de Productos","totalPages":1}
-{"level":"info","message":"GET /api/login/logout?","timestamp":"2023-07-12T04:12:25.074Z"}
-{"level":"info","message":"GET /api/login","timestamp":"2023-07-12T04:12:25.828Z"}
-{"level":"info","message":"GET /api/register","timestamp":"2023-07-12T04:13:17.352Z"}
-{"level":"info","message":"POST /api/register","timestamp":"2023-07-12T04:13:25.928Z"}
-{"level":"info","message":"POST /api/register","timestamp":"2023-07-12T04:16:10.256Z"}
-{"level":"info","message":"GET /api/register","timestamp":"2023-07-12T04:18:37.965Z"}
-{"level":"info","message":"POST /api/register","timestamp":"2023-07-12T04:18:45.178Z"}
-{"$__":{"$versionError":null,"activePaths":{"paths":{},"states":{"default":{},"modify":{}}},"backup":{"activePaths":{"default":{"_id":true},"modify":{"age":true,"cartId":true,"email":true,"first_name":true,"last_name":true,"password":true,"role":true}},"validationError":null},"cachedRequired":{},"inserting":true,"op":null,"saveOptions":null,"savedState":{},"saving":null,"validating":null},"$isNew":false,"_doc":{"__v":0,"_id":"64ae29a559689501b652252e","cartId":"64ae29a559689501b652252c","email":"luwedmilasawerczuk@hotmail.com","first_name":"asd","last_name":"asd","password":"$2b$10$Mfx1.cphv/.UtAa8FGosMuFOPIxc7ig6/JKVD5KL4v/R1SsF9Q5hi","role":"usuario"},"level":"info","message":"Se registro un nuevo usuario","timestamp":"2023-07-12T04:18:46.566Z"}
-{"level":"info","message":"GET /api/login","timestamp":"2023-07-12T04:18:48.873Z"}
-{"level":"info","message":"GET /api/login/","timestamp":"2023-07-12T04:25:57.279Z"}
-{"level":"info","message":"GET /api/register","timestamp":"2023-07-12T04:26:02.055Z"}
-{"level":"info","message":"POST /api/register","timestamp":"2023-07-12T04:26:08.777Z"}
-{"$__":{"$versionError":null,"activePaths":{"paths":{},"states":{"default":{},"modify":{}}},"backup":{"activePaths":{"default":{"_id":true},"modify":{"age":true,"cartId":true,"email":true,"first_name":true,"last_name":true,"password":true,"role":true}},"validationError":null},"cachedRequired":{},"inserting":true,"op":null,"saveOptions":null,"savedState":{},"saving":null,"validating":null},"$isNew":false,"_doc":{"__v":0,"_id":"64ae2b61e05d6f7a78680641","cartId":"64ae2b61e05d6f7a7868063f","email":"mx1at@hotmail.com","first_name":"asd","last_name":"asd","password":"$2b$10$/TmSF5Sovj5WL4y3IwdXgOG2B2/azQ8LbuQVVe92RDyxFiybhpDgK","role":"usuario"},"level":"info","message":"Se registro un nuevo usuario","timestamp":"2023-07-12T04:26:10.096Z"}
-{"level":"info","message":"GET /api/login","timestamp":"2023-07-12T04:26:12.376Z"}
-{"level":"info","message":"POST /api/login","timestamp":"2023-07-12T04:26:23.195Z"}
-{"_id":"64ae2788a9c8992fee545ebd","cartId":"64ae2788a9c8992fee545ebb","email":"matti.gomez1997@gmail.com","first_name":"asd","last_name":"asd","level":"info","message":"sesion iniciada","role":"usuario","timestamp":"2023-07-12T04:26:24.538Z"}
-{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-07-12T04:26:26.870Z"}
-{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64ae2788a9c8992fee545ebb","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-12T04:26:27.842Z","title":"Lista de Productos","totalPages":1}
-{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64ae2788a9c8992fee545ebb","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-12T04:26:27.843Z","title":"Lista de Productos","totalPages":1}
-{"level":"info","message":"GET /api/login/logout?","timestamp":"2023-07-12T04:26:29.583Z"}
-{"level":"info","message":"GET /api/login","timestamp":"2023-07-12T04:26:30.334Z"}
-{"level":"info","message":"GET /api/login/forgot-password","timestamp":"2023-07-12T04:26:32.433Z"}
-{"level":"info","message":"POST /api/login/forgot-password","timestamp":"2023-07-12T04:26:34.028Z"}
-{"level":"info","message":"Token generado con exito","timestamp":"2023-07-12T04:26:34.277Z"}
-{"level":"info","message":"GET /api/login","timestamp":"2023-07-12T04:26:35.245Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:26:50.183Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:26:56.976Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:27:30.110Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:27:30.788Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:28:19.334Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:28:20.574Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:28:55.425Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:29:00.441Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:31:37.954Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:31:41.195Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:31:49.421Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:31:49.728Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:31:50.024Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:31:50.269Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:31:50.509Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:31:50.822Z"}
-{"level":"info","message":"POST /api/login/reset-password","timestamp":"2023-07-12T04:31:51.086Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:33:44.007Z"}
-{"level":"info","message":"PATCH /api/login/","timestamp":"2023-07-12T04:33:47.458Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:35:29.112Z"}
-{"level":"info","message":"POST /api/login/reset-password/%7B%7Bemail%7D%7D","timestamp":"2023-07-12T04:35:32.619Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:36:37.949Z"}
-{"level":"info","message":"POST /api/login/reset-password/%7B%7Bemail%7D%7D","timestamp":"2023-07-12T04:36:44.040Z"}
-{"level":"info","message":"POST /api/login/reset-password/%7B%7Bemail%7D%7D","timestamp":"2023-07-12T04:36:45.456Z"}
-{"level":"info","message":"GET /api/login","timestamp":"2023-07-12T04:36:51.484Z"}
-{"level":"info","message":"POST /api/login","timestamp":"2023-07-12T04:36:55.792Z"}
-{"level":"info","message":"GET /api/login/faillogin","timestamp":"2023-07-12T04:36:56.349Z"}
-{"level":"error","message":"Error al iniciar sesion","timestamp":"2023-07-12T04:36:56.350Z"}
-{"level":"info","message":"POST /api/login","timestamp":"2023-07-12T04:36:58.187Z"}
-{"_id":"64ae2788a9c8992fee545ebd","cartId":"64ae2788a9c8992fee545ebb","email":"matti.gomez1997@gmail.com","first_name":"asd","last_name":"asd","level":"info","message":"sesion iniciada","role":"usuario","timestamp":"2023-07-12T04:36:58.978Z"}
-{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-07-12T04:37:01.235Z"}
-{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64ae2788a9c8992fee545ebb","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-12T04:37:02.219Z","title":"Lista de Productos","totalPages":1}
-{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64ae2788a9c8992fee545ebb","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-12T04:37:02.219Z","title":"Lista de Productos","totalPages":1}
-{"level":"info","message":"GET /api/login/logout?","timestamp":"2023-07-12T04:37:03.797Z"}
-{"level":"info","message":"GET /api/login","timestamp":"2023-07-12T04:37:04.538Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:41:36.806Z"}
-{"level":"info","message":"POST /api/login/reset-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:41:39.379Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:42:29.349Z"}
-{"level":"info","message":"POST /api/login/reset-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:42:37.539Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:43:49.636Z"}
-{"level":"info","message":"POST /api/login/reset-password/[object%20Object]","timestamp":"2023-07-12T04:43:52.871Z"}
-{"level":"info","message":"GET /api/login","timestamp":"2023-07-12T04:44:07.617Z"}
-{"level":"info","message":"POST /api/login","timestamp":"2023-07-12T04:44:10.248Z"}
-{"_id":"64ae2788a9c8992fee545ebd","cartId":"64ae2788a9c8992fee545ebb","email":"matti.gomez1997@gmail.com","first_name":"asd","last_name":"asd","level":"info","message":"sesion iniciada","role":"usuario","timestamp":"2023-07-12T04:44:11.044Z"}
-{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-07-12T04:44:13.336Z"}
-{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64ae2788a9c8992fee545ebb","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-12T04:44:14.305Z","title":"Lista de Productos","totalPages":1}
-{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64ae2788a9c8992fee545ebb","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-12T04:44:14.305Z","title":"Lista de Productos","totalPages":1}
-{"level":"info","message":"GET /api/login/logout?","timestamp":"2023-07-12T04:44:16.336Z"}
-{"level":"info","message":"GET /api/login","timestamp":"2023-07-12T04:44:17.071Z"}
-{"level":"info","message":"POST /api/login","timestamp":"2023-07-12T04:44:20.804Z"}
-{"level":"info","message":"GET /api/login/faillogin","timestamp":"2023-07-12T04:44:21.352Z"}
-{"level":"error","message":"Error al iniciar sesion","timestamp":"2023-07-12T04:44:21.352Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:46:46.735Z"}
-{"level":"info","message":"POST /api/login/reset-password/[object%20Object]","timestamp":"2023-07-12T04:46:50.337Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:47:12.270Z"}
-{"level":"info","message":"POST /api/login/reset-password/[object%20Object]","timestamp":"2023-07-12T04:47:15.036Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:47:19.936Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:48:47.635Z"}
-{"level":"info","message":"POST /api/login/reset-password/[object%20Object]","timestamp":"2023-07-12T04:48:56.638Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:50:19.716Z"}
-{"level":"info","message":"GET /api/login","timestamp":"2023-07-12T04:50:23.196Z"}
-{"level":"info","message":"POST /api/login","timestamp":"2023-07-12T04:50:27.682Z"}
-{"_id":"64ae2788a9c8992fee545ebd","cartId":"64ae2788a9c8992fee545ebb","email":"matti.gomez1997@gmail.com","first_name":"asd","last_name":"asd","level":"info","message":"sesion iniciada","role":"usuario","timestamp":"2023-07-12T04:50:28.493Z"}
-{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-07-12T04:50:30.775Z"}
-{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64ae2788a9c8992fee545ebb","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-12T04:50:31.752Z","title":"Lista de Productos","totalPages":1}
-{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64ae2788a9c8992fee545ebb","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-12T04:50:31.752Z","title":"Lista de Productos","totalPages":1}
-{"level":"info","message":"GET /api/login/logout?","timestamp":"2023-07-12T04:50:33.105Z"}
-{"level":"info","message":"GET /api/login","timestamp":"2023-07-12T04:50:33.845Z"}
-{"level":"info","message":"POST /api/login","timestamp":"2023-07-12T04:50:41.662Z"}
-{"level":"info","message":"GET /api/login/faillogin","timestamp":"2023-07-12T04:50:42.227Z"}
-{"level":"error","message":"Error al iniciar sesion","timestamp":"2023-07-12T04:50:42.227Z"}
-{"level":"info","message":"GET /api/login/forgot-password/matti.gomez1997@gmail.com","timestamp":"2023-07-12T04:50:45.390Z"}
-{"level":"info","message":"POST /api/login/reset-password/[object%20Object]","timestamp":"2023-07-12T04:50:55.901Z"}
-{"level":"info","message":"GET /api/login","timestamp":"2023-07-12T04:51:00.282Z"}
-{"level":"info","message":"POST /api/login","timestamp":"2023-07-12T04:51:03.429Z"}
-{"level":"info","message":"GET /api/login/faillogin","timestamp":"2023-07-12T04:51:03.995Z"}
-{"level":"error","message":"Error al iniciar sesion","timestamp":"2023-07-12T04:51:03.996Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T01:24:26.048Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T01:25:47.815Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T01:28:49.176Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T01:35:24.517Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T01:39:35.124Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T01:44:39.742Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-07-28T02:02:00.436Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-07-28T02:04:33.176Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-07-28T02:06:18.948Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T02:06:40.209Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T02:14:55.674Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T02:21:24.667Z"}
+{"level":"info","message":"GET /","timestamp":"2023-07-28T02:24:55.349Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-07-28T02:24:58.878Z"}
+{"level":"info","message":"GET /favicon.ico","timestamp":"2023-07-28T02:24:59.403Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T02:25:04.018Z"}
+{"_id":"64963911d881bb766bb34122","cartId":"64963910d881bb766bb34120","email":"asd@hotmail.com","first_name":"asd","last_name":"asd","level":"info","message":"sesion iniciada","role":"usuario","timestamp":"2023-07-28T02:25:05.399Z"}
+{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-07-28T02:25:07.689Z"}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64963910d881bb766bb34120","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-28T02:25:08.664Z","title":"Lista de Productos","totalPages":1}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64963910d881bb766bb34120","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-28T02:25:08.665Z","title":"Lista de Productos","totalPages":1}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T02:25:24.695Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T02:30:59.200Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T02:31:24.811Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T02:35:53.125Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T02:45:20.107Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T02:46:09.805Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T02:52:08.587Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T02:52:57.767Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T02:53:26.029Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T02:55:48.613Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T02:59:29.922Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T03:03:25.013Z"}
+{"level":"info","message":"GET /api/messages?","timestamp":"2023-07-28T03:07:45.248Z"}
+{"level":"info","message":"GET /api/login/logout?","timestamp":"2023-07-28T03:07:48.319Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-07-28T03:07:48.830Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T03:07:52.455Z"}
+{"_id":"64963911d881bb766bb34122","cartId":"64963910d881bb766bb34120","email":"asd@hotmail.com","first_name":"asd","last_name":"asd","level":"info","message":"sesion iniciada","role":"usuario","timestamp":"2023-07-28T03:07:53.371Z"}
+{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-07-28T03:07:55.698Z"}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64963910d881bb766bb34120","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-28T03:07:56.692Z","title":"Lista de Productos","totalPages":1}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64963910d881bb766bb34120","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-28T03:07:56.693Z","title":"Lista de Productos","totalPages":1}
+{"level":"info","message":"GET /api/login/logout?","timestamp":"2023-07-28T03:08:27.073Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-07-28T03:08:27.574Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-07-28T03:08:35.753Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-07-28T03:08:54.109Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-07-28T03:08:54.936Z"}
+{"level":"info","message":"GET /api/register","timestamp":"2023-07-28T03:09:00.874Z"}
+{"level":"info","message":"POST /api/register","timestamp":"2023-07-28T03:09:07.711Z"}
+{"$__":{"$versionError":null,"activePaths":{"paths":{},"states":{"default":{},"modify":{}}},"backup":{"activePaths":{"default":{"_id":true},"modify":{"age":true,"cartId":true,"email":true,"first_name":true,"last_name":true,"password":true,"role":true}},"validationError":null},"cachedRequired":{},"inserting":true,"op":null,"saveOptions":null,"savedState":{},"saving":null,"validating":null},"$isNew":false,"_doc":{"__v":0,"_id":"64c33154a2d6559b5b18bf2b","cartId":"64c33154a2d6559b5b18bf29","email":"asdxad@hotmail.com","first_name":"a","last_name":"a","password":"$2b$10$ZgQVBv4oEQ/td.F2iVRkHu3m1jAt0RLkOKel0.iWuRaGiq.7mYfUm","role":"usuario"},"level":"info","message":"Se registro un nuevo usuario","timestamp":"2023-07-28T03:09:09.084Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-07-28T03:09:11.413Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-28T03:10:47.097Z"}
