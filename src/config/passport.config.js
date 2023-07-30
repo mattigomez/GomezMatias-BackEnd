@@ -14,7 +14,7 @@ const initializePassport = () => {
     new LocalStrategy({ passReqToCallback: true, usernameField: 'email' },
     async (req,username,password,done) =>{
         try {
-            const { first_name, last_name, email, password } = req.body
+            const { first_name, last_name, email,age, password } = req.body
             const user = await Users.findOne({email: username})
 
             if(user){
@@ -25,6 +25,7 @@ const initializePassport = () => {
                 first_name,
                 last_name,
                 email,
+                age,
                 password: createHash(password)
               };
             const newUser = await usersCreate(newUserInfo);

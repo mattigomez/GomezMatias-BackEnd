@@ -1,11 +1,12 @@
 const chai = require('chai')
 const supertest = require('supertest')
-const app = require ('../src/app')
-const { cartId, productId } = require('../src/config/util.config')
+const app = require ('../src/app.js')
 const { tester_email, tester_password } = require('../src/config/admin.config')
+
+
 const expect = chai.expect
 const requester = supertest(app)
- 
+
 let cookies // Variable global para almacenar las cookies de sesión
  
 describe('test de productos', () => {

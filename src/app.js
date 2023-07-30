@@ -13,10 +13,14 @@ const swaggerJSDoc = require('swagger-jsdoc')
 
 const app = express()
 
+app.use((req, res, next) => {
+  logger.info(`${req.method} ${req.url}`)
+  next()
+})
+app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(__dirname + '/public'))
-app.use(cookieParser())
 app.use(session({
     store: MongoStore.create({
         mongoUrl: 'mongodb+srv://admin:admin@cluster0.djfkdgp.mongodb.net/Sessions?retryWrites=true&w=majority',
@@ -28,10 +32,6 @@ app.use(session({
 
 }))
 
-app.use((req, res, next) => {
-  logger.info(`${req.method} ${req.url}`)
-  next()
-})
 
 const swaggerOptions = {
   definition: {
