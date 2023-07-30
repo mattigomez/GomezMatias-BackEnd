@@ -153,3 +153,34 @@
 {"$__":{"$versionError":null,"activePaths":{"paths":{},"states":{"default":{},"modify":{}}},"backup":{"activePaths":{"default":{"_id":true},"modify":{"age":true,"cartId":true,"email":true,"first_name":true,"last_name":true,"password":true,"role":true}},"validationError":null},"cachedRequired":{},"inserting":true,"op":null,"saveOptions":null,"savedState":{},"saving":null,"validating":null},"$isNew":false,"_doc":{"__v":0,"_id":"64c33154a2d6559b5b18bf2b","cartId":"64c33154a2d6559b5b18bf29","email":"asdxad@hotmail.com","first_name":"a","last_name":"a","password":"$2b$10$ZgQVBv4oEQ/td.F2iVRkHu3m1jAt0RLkOKel0.iWuRaGiq.7mYfUm","role":"usuario"},"level":"info","message":"Se registro un nuevo usuario","timestamp":"2023-07-28T03:09:09.084Z"}
 {"level":"info","message":"GET /api/login","timestamp":"2023-07-28T03:09:11.413Z"}
 {"level":"info","message":"POST /api/login","timestamp":"2023-07-28T03:10:47.097Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-30T16:44:03.555Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-30T16:48:57.301Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-30T16:50:28.552Z"}
+{"level":"info","message":"GET /","timestamp":"2023-07-30T16:50:57.102Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-07-30T16:51:04.603Z"}
+{"level":"info","message":"GET /favicon.ico","timestamp":"2023-07-30T16:51:04.769Z"}
+{"level":"info","message":"GET /api/register","timestamp":"2023-07-30T16:51:06.152Z"}
+{"level":"info","message":"POST /api/register","timestamp":"2023-07-30T16:53:57.626Z"}
+{"$__":{"$versionError":null,"activePaths":{"paths":{},"states":{"default":{},"modify":{}}},"backup":{"activePaths":{"default":{"_id":true},"modify":{"age":true,"cartId":true,"email":true,"first_name":true,"last_name":true,"password":true,"role":true}},"validationError":null},"cachedRequired":{},"inserting":true,"op":null,"saveOptions":null,"savedState":{},"saving":null,"validating":null},"$isNew":false,"_doc":{"__v":0,"_id":"64c695a6bd82a7d1c578f4cf","cartId":"64c695a6bd82a7d1c578f4cd","email":"tester@hotmail.com","first_name":"tester","last_name":"tester","password":"$2b$10$oP3.WiHyuwUneqHzWTSjzuvu2OZ0qeh2RrOpXnwDs9KOjRyJvU2Mi","role":"usuario"},"level":"info","message":"Se registro un nuevo usuario","timestamp":"2023-07-30T16:53:59.032Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-07-30T16:54:01.363Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-30T16:54:06.298Z"}
+{"_id":"64c695a6bd82a7d1c578f4cf","cartId":"64c695a6bd82a7d1c578f4cd","email":"tester@hotmail.com","first_name":"tester","last_name":"tester","level":"info","message":"sesion iniciada","role":"usuario","timestamp":"2023-07-30T16:54:07.377Z"}
+{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-07-30T16:54:09.686Z"}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64c695a6bd82a7d1c578f4cd","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario tester tester!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-30T16:54:10.672Z","title":"Lista de Productos","totalPages":1}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64c695a6bd82a7d1c578f4cd","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario tester tester!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-30T16:54:10.673Z","title":"Lista de Productos","totalPages":1}
+{"level":"info","message":"GET /api/login/logout?","timestamp":"2023-07-30T16:54:15.568Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-07-30T16:54:16.295Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-07-30T16:55:42.976Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-30T16:55:47.576Z"}
+{"_id":"64c695a6bd82a7d1c578f4cf","cartId":"64c695a6bd82a7d1c578f4cd","email":"tester@hotmail.com","first_name":"tester","last_name":"tester","level":"info","message":"sesion iniciada","role":"administrador","timestamp":"2023-07-30T16:55:48.396Z"}
+{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-07-30T16:55:50.680Z"}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64c695a6bd82a7d1c578f4cd","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido administrador tester tester!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-30T16:55:51.648Z","title":"Lista de Productos","totalPages":1}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64c695a6bd82a7d1c578f4cd","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido administrador tester tester!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-07-30T16:55:51.648Z","title":"Lista de Productos","totalPages":1}
+{"level":"info","message":"GET /api/login/logout?","timestamp":"2023-07-30T16:55:55.291Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-07-30T16:55:56.073Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-30T16:56:05.790Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-30T16:57:52.047Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-30T17:01:51.318Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-30T17:04:37.838Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-30T17:05:24.947Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-30T17:07:10.929Z"}
