@@ -60,33 +60,5 @@ class UserRepository {
       } catch (error) {
         logger.error('Error al cambiar el role del usuario', error)
         throw new ErrorRepository('Error al cambiar el rol', 500)
-      }
-    }
-  
-    async sendPasswordResetEmail(email){
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: 'gomezmati1997@gmail.com',
-          pass: 'uucmalirqwvgnkai',
-        }
-      });
-      const resetLink = `http://localhost:3000/api/login/forgot-password/${email}`;
-      const mailOptions = {
-        from: 'gomezmati1997@gmail.com',
-        to: email,
-        subject: 'Restablecimiento de contraseña',
-        text: `Para restablecer tu contraseña, haz clic en el siguiente enlace: ${resetLink}`,
-      };
-    
-      transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-          console.error('Error al enviar el correo electrónico:', error);
-        } else {
-          console.log('Correo electrónico enviado:', info.response);
-        }
-      });
-    }
-}
-
+      }}}
 module.exports = UserRepository

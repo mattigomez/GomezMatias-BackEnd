@@ -80,6 +80,8 @@ router.post('/',passport.authenticate('login',{failureRedirect: '/api/login/fail
       role: req.user.role,
       cartId: req.user.cartId
     };
+
+    await Users.findByIdAndUpdate(req.user._id, {last_connection:true})
     
     logger.info('sesion iniciada' , req.session.user)
     res.status(200).json({ status: 'success', message: 'sesion iniciada' });
@@ -94,10 +96,13 @@ router.get('/github', passport.authenticate('github',{scope: ['user: email']}),a
 router.get('/githubcallback', passport.authenticate('github',{failureRedirect:'/api/login/faillogin'}),
     async(req,res) => {
       req.session.user = req.user
+      await Users.findByIdAndUpdate(req.user._id, {last_connection:true})
       res.redirect('/api/dbProducts?limit=9')
     })
 
-router.get('/logout', (req,res) => {
+router.get('/logout',async (req,res) => {
+    /* await Users.findByIdAndUpdate(req.user._id, {last_connection:false}) */
+
     req.session.destroy(error => {
         if(error){
           logger.error('Error al cerrar sesion', error)

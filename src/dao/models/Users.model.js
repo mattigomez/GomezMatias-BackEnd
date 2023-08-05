@@ -20,7 +20,12 @@ const collectionSchema = new mongoose.Schema({
     type: String,
     enum: ['administrador', 'usuario','premium'],
     default: 'usuario',
-  }
+  },
+  document: [{
+    name:String,
+    reference:String,
+  }],
+  last_connection: Boolean
 
 })
 

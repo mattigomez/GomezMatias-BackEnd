@@ -228,3 +228,97 @@
 {"level":"info","message":"GET /api/login/api/sessions/current","timestamp":"2023-07-30T18:00:05.789Z"}
 {"level":"info","message":"POST /api/login/api/login","timestamp":"2023-07-30T18:03:44.658Z"}
 {"level":"info","message":"POST /api/login","timestamp":"2023-07-30T18:04:10.281Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-07-30T18:06:30.132Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-08-03T18:41:07.606Z"}
+{"level":"info","message":"GET /js/login.js","timestamp":"2023-08-03T18:41:07.736Z"}
+{"level":"info","message":"GET /favicon.ico","timestamp":"2023-08-03T18:41:07.883Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-08-03T18:41:10.811Z"}
+{"_id":"64963911d881bb766bb34122","cartId":"64963910d881bb766bb34120","email":"asd@hotmail.com","first_name":"asd","last_name":"asd","level":"info","message":"sesion iniciada","role":"usuario","timestamp":"2023-08-03T18:41:12.236Z"}
+{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-08-03T18:41:14.319Z"}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64963910d881bb766bb34120","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-08-03T18:41:15.562Z","title":"Lista de Productos","totalPages":1}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64963910d881bb766bb34120","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-08-03T18:41:15.562Z","title":"Lista de Productos","totalPages":1}
+{"level":"info","message":"GET /api/dbCarts/64963910d881bb766bb34120?","timestamp":"2023-08-03T18:42:03.694Z"}
+{"level":"info","message":"GET /api/messages?","timestamp":"2023-08-03T18:42:06.810Z"}
+{"level":"info","message":"GET /api/messages","timestamp":"2023-08-03T18:42:24.498Z"}
+{"level":"info","message":"GET /api/login/logout?","timestamp":"2023-08-03T18:42:29.389Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-08-03T18:47:32.240Z"}
+{"level":"info","message":"GET /js/login.js","timestamp":"2023-08-03T18:47:32.520Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-08-03T18:47:37.844Z"}
+{"_id":"64963911d881bb766bb34122","cartId":"64963910d881bb766bb34120","email":"asd@hotmail.com","first_name":"asd","last_name":"asd","level":"info","message":"sesion iniciada","role":"usuario","timestamp":"2023-08-03T18:47:39.198Z"}
+{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-08-03T18:47:41.250Z"}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64963910d881bb766bb34120","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-08-03T18:47:42.429Z","title":"Lista de Productos","totalPages":1}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64963910d881bb766bb34120","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-08-03T18:47:42.429Z","title":"Lista de Productos","totalPages":1}
+{"level":"info","message":"GET /api/login/logout?","timestamp":"2023-08-03T18:47:44.153Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-08-03T18:47:45.111Z"}
+{"level":"info","message":"GET /js/login.js","timestamp":"2023-08-03T18:47:45.379Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-08-03T18:50:12.936Z"}
+{"level":"info","message":"GET /js/login.js","timestamp":"2023-08-03T18:50:13.263Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-08-03T18:50:16.675Z"}
+{"level":"info","message":"GET /api/login/faillogin","timestamp":"2023-08-03T18:50:17.271Z"}
+{"level":"error","message":"Error al iniciar sesion","timestamp":"2023-08-03T18:50:17.513Z"}
+{"level":"info","message":"GET /api/register","timestamp":"2023-08-03T18:50:19.225Z"}
+{"level":"info","message":"GET /js/signup.js","timestamp":"2023-08-03T18:50:19.527Z"}
+{"level":"info","message":"POST /api/register","timestamp":"2023-08-03T18:50:26.893Z"}
+{"$__":{"$versionError":null,"activePaths":{"paths":{},"states":{"default":{},"modify":{}}},"backup":{"activePaths":{"default":{"_id":true,"document":true},"modify":{"age":true,"cartId":true,"email":true,"first_name":true,"last_name":true,"password":true,"role":true}},"validationError":null},"cachedRequired":{},"inserting":true,"op":null,"saveOptions":null,"savedState":{},"saving":null,"validating":null},"$isNew":false,"_doc":{"__v":0,"_id":"64cbf6f3ea7063cb39953817","age":22,"cartId":"64cbf6f3ea7063cb39953815","document":[],"email":"asd@hotmail.com","first_name":"asd","last_name":"asd","password":"$2b$10$cym.FZQEKqe/dZT0SUd.P.m7qEqxkTAaRMvBquP78l.SBMus9bqTi","role":"usuario"},"level":"info","message":"Se registro un nuevo usuario","timestamp":"2023-08-03T18:50:28.589Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-08-03T18:50:30.639Z"}
+{"level":"info","message":"GET /js/login.js","timestamp":"2023-08-03T18:50:31.200Z"}
+{"level":"info","message":"GET /api/register","timestamp":"2023-08-03T18:50:34.938Z"}
+{"level":"info","message":"GET /js/signup.js","timestamp":"2023-08-03T18:50:35.478Z"}
+{"level":"info","message":"POST /api/register","timestamp":"2023-08-03T18:50:41.244Z"}
+{"level":"info","message":"GET /api/register/failregister","timestamp":"2023-08-03T18:50:41.985Z"}
+{"level":"error","message":"El mail no esta disponible","timestamp":"2023-08-03T18:50:43.663Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-08-03T18:50:57.092Z"}
+{"level":"info","message":"GET /api/login/faillogin","timestamp":"2023-08-03T18:50:57.950Z"}
+{"level":"error","message":"Error al iniciar sesion","timestamp":"2023-08-03T18:50:58.435Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-08-03T18:51:00.827Z"}
+{"_id":"64cbf6f3ea7063cb39953817","cartId":"64cbf6f3ea7063cb39953815","email":"asd@hotmail.com","first_name":"asd","last_name":"asd","level":"info","message":"sesion iniciada","role":"usuario","timestamp":"2023-08-03T18:51:02.406Z"}
+{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-08-03T18:51:04.481Z"}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64cbf6f3ea7063cb39953815","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-08-03T18:51:05.711Z","title":"Lista de Productos","totalPages":1}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64cbf6f3ea7063cb39953815","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-08-03T18:51:05.712Z","title":"Lista de Productos","totalPages":1}
+{"level":"info","message":"GET /api/login/logout?","timestamp":"2023-08-03T18:51:12.165Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-08-03T18:51:13.156Z"}
+{"level":"info","message":"GET /js/login.js","timestamp":"2023-08-03T18:51:13.453Z"}
+{"level":"info","message":"POST /api/users/64cbf6f3ea7063cb39953817/documents","timestamp":"2023-08-03T20:30:42.540Z"}
+{"level":"info","message":"POST /api/users/64cbf6f3ea7063cb39953817/documents","timestamp":"2023-08-03T20:31:30.098Z"}
+{"level":"info","message":"POST /api/users/64cbf6f3ea7063cb39953817/documents/profile","timestamp":"2023-08-03T20:32:55.285Z"}
+{"level":"info","message":"POST /api/users/64cbf6f3ea7063cb39953817/documents/profiles","timestamp":"2023-08-03T20:33:09.159Z"}
+{"level":"info","message":"POST /api/users/64cbf6f3ea7063cb39953817/profiles","timestamp":"2023-08-03T20:34:12.114Z"}
+{"level":"info","message":"POST /api/users/64cbf6f3ea7063cb39953817/profiles","timestamp":"2023-08-03T20:34:25.411Z"}
+{"level":"info","message":"POST /api/users/64cbf6f3ea7063cb39953817/profiles","timestamp":"2023-08-03T20:34:35.425Z"}
+{"level":"info","message":"POST /api/users/64cbf6f3ea7063cb39953817/documents","timestamp":"2023-08-05T14:19:28.708Z"}
+{"level":"info","message":"POST /api/users/64cbf6f3ea7063cb39953817/documents","timestamp":"2023-08-05T14:21:16.359Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-08-05T14:34:39.603Z"}
+{"level":"info","message":"GET /js/login.js","timestamp":"2023-08-05T14:34:39.664Z"}
+{"level":"info","message":"GET /favicon.ico","timestamp":"2023-08-05T14:34:39.872Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-08-05T14:34:43.508Z"}
+{"_id":"64cbf6f3ea7063cb39953817","cartId":"64cbf6f3ea7063cb39953815","email":"asd@hotmail.com","first_name":"asd","last_name":"asd","level":"info","message":"sesion iniciada","role":"usuario","timestamp":"2023-08-05T14:34:44.840Z"}
+{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-08-05T14:34:46.945Z"}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64cbf6f3ea7063cb39953815","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-08-05T14:34:48.179Z","title":"Lista de Productos","totalPages":1}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64cbf6f3ea7063cb39953815","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-08-05T14:34:48.180Z","title":"Lista de Productos","totalPages":1}
+{"level":"info","message":"GET /api/messages?","timestamp":"2023-08-05T14:34:50.242Z"}
+{"level":"info","message":"GET /api/dbCarts/64cbf6f3ea7063cb39953815?","timestamp":"2023-08-05T14:35:02.761Z"}
+{"cartId":"64cbf6f3ea7063cb39953815","level":"info","message":"Carrito especifico: ","timestamp":"2023-08-05T14:35:03.502Z"}
+{"level":"info","message":"GET /api/dbProducts?","timestamp":"2023-08-05T14:35:05.793Z"}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64cbf6f3ea7063cb39953815","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-08-05T14:35:07.010Z","title":"Lista de Productos","totalPages":1}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64cbf6f3ea7063cb39953815","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-08-05T14:35:07.010Z","title":"Lista de Productos","totalPages":1}
+{"level":"info","message":"GET /api/dbCarts/64cbf6f3ea7063cb39953815?","timestamp":"2023-08-05T14:35:10.233Z"}
+{"cartId":"64cbf6f3ea7063cb39953815","level":"info","message":"Carrito especifico: ","timestamp":"2023-08-05T14:35:10.966Z"}
+{"level":"info","message":"GET /api/dbCarts/64cbf6f3ea7063cb39953815/purchase","timestamp":"2023-08-05T14:35:15.193Z"}
+{"$__":{"$versionError":null,"activePaths":{"paths":{},"states":{"default":{},"modify":{}}},"backup":{"activePaths":{"default":{"_id":true},"modify":{"amount":true,"code":true,"processProducts":true,"purchase_datetime":true,"purchaser":true}},"validationError":null},"cachedRequired":{},"inserting":true,"op":null,"pathsToScopes":{"processProducts":{"__v":0,"_id":"64ce5e2455f6c2a8de3f939b","amount":0,"code":"a23373d1-a928-466b-855c-6722c102b4eb","processProducts":[],"purchase_datetime":"2023-08-05T14:35:16.160Z","purchaser":"asd@hotmail.com"}},"saveOptions":null,"savedState":{},"saving":null,"validating":null},"$isNew":false,"_doc":{"__v":0,"_id":"64ce5e2455f6c2a8de3f939b","amount":0,"code":"a23373d1-a928-466b-855c-6722c102b4eb","processProducts":[],"purchase_datetime":"2023-08-05T14:35:16.160Z","purchaser":"asd@hotmail.com"},"level":"info","message":"Ticket con los productos procesados","timestamp":"2023-08-05T14:35:16.415Z"}
+{"$__":{"$versionError":null,"activePaths":{"paths":{"__v":"init","_id":"init","productos":"init"},"states":{"init":{"__v":true,"_id":true,"productos":true}}},"cachedRequired":{},"inserting":false,"op":null,"saveOptions":null,"savedState":{},"saving":null,"skipId":true,"validating":null,"validationError":null},"$isNew":false,"_doc":{"__v":0,"_id":"64cbf6f3ea7063cb39953815","productos":[]},"level":"info","message":"Compra realizada con exito!","timestamp":"2023-08-05T14:35:16.416Z"}
+{"level":"info","message":"GET /api/dbProducts?","timestamp":"2023-08-05T14:35:22.651Z"}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64cbf6f3ea7063cb39953815","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-08-05T14:35:23.865Z","title":"Lista de Productos","totalPages":1}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64cbf6f3ea7063cb39953815","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-08-05T14:35:23.865Z","title":"Lista de Productos","totalPages":1}
+{"level":"info","message":"GET /api/dbCarts/64cbf6f3ea7063cb39953815?","timestamp":"2023-08-05T14:35:27.987Z"}
+{"cartId":"64cbf6f3ea7063cb39953815","level":"info","message":"Carrito especifico: ","timestamp":"2023-08-05T14:35:28.722Z"}
+{"level":"info","message":"GET /api/login/logout?","timestamp":"2023-08-05T14:36:44.551Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-08-05T14:42:08.942Z"}
+{"level":"info","message":"GET /js/login.js","timestamp":"2023-08-05T14:42:09.266Z"}
+{"level":"info","message":"POST /api/login","timestamp":"2023-08-05T14:42:12.759Z"}
+{"_id":"64cbf6f3ea7063cb39953817","cartId":"64cbf6f3ea7063cb39953815","email":"asd@hotmail.com","first_name":"asd","last_name":"asd","level":"info","message":"sesion iniciada","role":"usuario","timestamp":"2023-08-05T14:42:14.140Z"}
+{"level":"info","message":"GET /api/dbProducts?limit=9","timestamp":"2023-08-05T14:42:16.212Z"}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64cbf6f3ea7063cb39953815","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"debug","message":"Productos encontrados:  Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-08-05T14:42:17.411Z","title":"Lista de Productos","totalPages":1}
+{"allowProtoMethodsByDefault":true,"allowProtoPropertiesByDefault":true,"cartId":"64cbf6f3ea7063cb39953815","cartQuantity":0,"hasNextPage":false,"hasPrevPage":false,"level":"info","message":"Productos agregados con exito Bienvenido usuario asd asd!","nextLink":null,"nextPage":null,"page":1,"prevLink":null,"prevPage":null,"products":[],"timestamp":"2023-08-05T14:42:17.411Z","title":"Lista de Productos","totalPages":1}
+{"level":"info","message":"GET /api/login/logout?","timestamp":"2023-08-05T14:42:48.259Z"}
+{"level":"info","message":"GET /api/login","timestamp":"2023-08-05T14:42:48.756Z"}
+{"level":"info","message":"GET /js/login.js","timestamp":"2023-08-05T14:42:49.057Z"}

@@ -15,7 +15,7 @@ class ResetPasswordRepository {
         pass: 'uucmalirqwvgnkai',
       }
     });
-    const resetLink = `http://localhost:3000/api/login/forgot-password/${email}`;
+    const resetLink = `http://localhost:8080/api/login/forgot-password/${email}`;
   
     // Configura el correo electrónico
     const mailOptions = {
