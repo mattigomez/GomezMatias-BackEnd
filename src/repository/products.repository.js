@@ -38,6 +38,10 @@ class ProductsRepository {
       const currentPage = products.page;
       const hasPrevPage = products.hasPrevPage;
       const hasNextPage = products.hasNextPage;
+
+//ver railway !!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
       const prevLink = hasPrevPage
         ? `http://${req.headers.host}/api/dbProducts?page=${prevPage}&limit=${limit}&sort=${sort}&query=${query}`
         : null;

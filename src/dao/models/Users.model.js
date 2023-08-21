@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose')
 
-const collectionName = 'sessions'
+const collectionName = 'users'
 
 const collectionSchema = new mongoose.Schema({
   first_name: String,
@@ -25,7 +25,7 @@ const collectionSchema = new mongoose.Schema({
     name:String,
     reference:String,
   }],
-  last_connection: Boolean
+  last_connection: Date
 
 })
 

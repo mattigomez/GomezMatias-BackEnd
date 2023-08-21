@@ -58,7 +58,7 @@ router.post('/reset-password/:email', async (req, res, next) => {
     const resetPasswordRepository = new ResetPasswordRepository()
     await resetPasswordRepository.resetPassword(newPassword, token, email)
 
-    res.status(200).json({message: 'Contraseña cambiada con exito'})
+    res.status(200).render('login.handlebars')
   } catch (error) {
     next(error)
   }})
@@ -72,16 +72,19 @@ router.post('/',passport.authenticate('login',{failureRedirect: '/api/login/fail
     }
 
     // Establecer una session a partir del usuario autenticado
-    req.session.user = {
+    req.session.user = req.user
+  /*   req.session.user = {
       _id: req.user._id,
       first_name: req.user.first_name,
       last_name: req.user.last_name,
       email: req.user.email,
       role: req.user.role,
       cartId: req.user.cartId
-    };
+    }; */
+    const dateConnection = new Date()
+    await Users.findByIdAndUpdate(req.user._id, {last_connection:dateConnection})
 
-    await Users.findByIdAndUpdate(req.user._id, {last_connection:true})
+    req.session.save()
     
     logger.info('sesion iniciada' , req.session.user)
     res.status(200).json({ status: 'success', message: 'sesion iniciada' });
@@ -91,26 +94,33 @@ router.post('/',passport.authenticate('login',{failureRedirect: '/api/login/fail
   }
 });
 
+
+router.get('/logout',async (req,res) => {
+
+  const dateConnection = new Date()
+  await Users.findByIdAndUpdate(req.user._id, {last_connection:dateConnection})
+  
+  req.session.destroy(error => {
+    if(error){
+      logger.error('Error al cerrar sesion', error)
+      return next(error)
+    }
+    res.redirect('/api/login')
+  })
+})
+
 router.get('/github', passport.authenticate('github',{scope: ['user: email']}),async (req,res) =>{})
 
 router.get('/githubcallback', passport.authenticate('github',{failureRedirect:'/api/login/faillogin'}),
     async(req,res) => {
-      req.session.user = req.user
-      await Users.findByIdAndUpdate(req.user._id, {last_connection:true})
+      const dateConnection = new Date()
+      await Users.findByIdAndUpdate(req.user._id, {last_connection:dateConnection})
+
+      req.session.user = req.
+      req.session.save()
+
       res.redirect('/api/dbProducts?limit=9')
     })
-
-router.get('/logout',async (req,res) => {
-    /* await Users.findByIdAndUpdate(req.user._id, {last_connection:false}) */
-
-    req.session.destroy(error => {
-        if(error){
-          logger.error('Error al cerrar sesion', error)
-          return next(error)
-        }
-        res.redirect('/api/login')
-    })
-})
 
 router.get('/faillogin',(req,res) =>{
   logger.error('Error al iniciar sesion')

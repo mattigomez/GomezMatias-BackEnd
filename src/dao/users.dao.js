@@ -1,7 +1,10 @@
 const UserRepository = require('../repository/users.repository')
 
+const userDao = new UserRepository()
 
+module.exports = userDao
 
+/* 
 async function usersCreate(userInfo){
 	try {
 		const userRepository = new UserRepository()
@@ -13,4 +16,4 @@ async function usersCreate(userInfo){
 }
 
 
-module.exports = usersCreate
+module.exports = usersCreate */

@@ -4,7 +4,7 @@ const Users = require('../dao/models/Users.model')
 const GithubStrategy = require ('passport-github2')
 const { createHash } = require('../utils/cryptPassword.util')
 const { passwordValidate } = require('../utils/cryptPassword.util')
-const usersCreate = require('../dao/users.dao')
+const userDao = require('../dao/users.dao')
 
 
 const LocalStrategy = local.Strategy
@@ -28,7 +28,7 @@ const initializePassport = () => {
                 age,
                 password: createHash(password)
               };
-            const newUser = await usersCreate(newUserInfo);
+            const newUser = await userDao.createUser(newUserInfo);
 
             done(null,newUser)
 
@@ -60,7 +60,11 @@ const initializePassport = () => {
     passport.use('github', new GithubStrategy({
         clientID: 'Iv1.222cde0f92763d95',
         clientSecret: '9943ed504febae0036aea47fdfd4e60b958d0025',
-        callbackURL: 'http://localhost:3000/api/login/githubcallback'
+
+
+        // falta agregar railway en callback !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        callbackURL: '/api/login/githubcallback'
     },async (accesToken, refreshToken,profile,done) => {
         try {
             /* console.log(profile) */
@@ -70,10 +74,11 @@ const initializePassport = () => {
             if(!user){ const newUserInfo = {
                 first_name: profile._json.name,
                 last_name: '',
+                age: 18,
                 email: profile._json.email,
                 password: ''
             }
-            const newUser = await usersCreate(newUserInfo)
+            const newUser = await userDao.createUser(newUserInfo)
             return done(null,newUser)
             }
 

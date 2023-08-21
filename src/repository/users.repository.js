@@ -3,7 +3,6 @@ const Users = require('../dao/models/Users.model')
 const Cart = require('../dao/models/Carts.model')
 const { admin_email, admin_password } = require('../config/admin.config')
 const ErrorRepository = require('../repository/errors.repository')
-const nodemailer = require ('nodemailer')
 const logger = require('../utils/logger.util')
 
 class UserRepository {
@@ -40,12 +39,44 @@ class UserRepository {
       }
 
       const user = await Users.create(newUserInfo)
+      logger.info('Usuario creado con exito', user)
       return user
     } catch (error) {
       logger.error('Error al crear el usuario, verifica tus datos.', error)
       throw new ErrorRepository('Error al crear el usuario', 500)
     }}
 
+    async deleteInactiveUsers(){
+      try{
+      // timeInactive = 2 dias a milisegundos 
+      const timeInactive = 172800000
+      const time = new Date()
+       // Encuentra los usuarios inactivos que no se han conectado en los últimos 2 días
+      const users = await Users.find({last_connection:{ $lt: new Date(time - timeInactive)}})
+      for (const user of users) {
+        try {
+          const lastConnectionTime = user.last_connection
+          const timeDifference = currentTime - lastConnectionTime
+  
+          if (timeDifference >= twoDaysInMilliseconds) {
+            // Enviar el correo electrónico
+            await this.sendInactiveUserEmail(user.email)
+  
+            // Eliminar la cuenta
+            await Users.findByIdAndDelete(user._id)
+  
+            logger.info(`Cuenta del usuario ${user.email} eliminada por inactividad.`)
+          }
+        } catch (emailError) {
+          logger.error(`Error al enviar el correo al usuario ${user.email}:`, emailError)
+        } 
+      }
+    } catch (error) {
+      logger.error('Error al eliminar usuarios inactivos:', error)
+      throw new ErrorRepository('Error al eliminar usuarios inactivos', 500)
+    }
+  }
+  
     async changeUserRole(user){
       try {
         const usuario = await Users.findOne({_id: user._id})
@@ -60,5 +91,6 @@ class UserRepository {
       } catch (error) {
         logger.error('Error al cambiar el role del usuario', error)
         throw new ErrorRepository('Error al cambiar el rol', 500)
-      }}}
+      }}
+    }
 module.exports = UserRepository

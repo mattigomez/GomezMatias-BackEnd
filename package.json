@@ -1,10 +1,11 @@
 {
-  "name": "primerapractica",
+  "name": "proyectoecommerce",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "api ecommerce",
   "scripts": {
     "test": "mocha test/supertest.test.js",
-    "start": "nodemon src/index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
     "express-session": "^1.17.3",
     "joi": "^17.9.2",
     "jsonwebtoken": "^9.0.1",
+    "moment": "^2.29.4",
     "mongoose": "^7.0.3",
     "mongoose-paginate-v2": "^1.7.1",
     "multer": "^1.4.5-lts.1",

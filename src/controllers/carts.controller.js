@@ -3,15 +3,15 @@ const mongoose = require('mongoose')
 const Cart = require('../dao/models/Carts.model')
 const Products = require('../dao/models/Products.model')
 const userAccess = require('../middlewares/userAccess.middleware')
-const saveProductInCar = require('../dao/carts.dao')
-const checkDataTicket = require('../dao/tickets.dao')
+const cartsDao = require('../dao/carts.dao')
+const ticketsDao = require('../dao/tickets.dao')
 const uuid = require('uuid')
 const ErrorRepository = require('../repository/errors.repository')
 const logger = require('../utils/logger.util')
 
 const router = Router()
 
-router.post('/',userAccess, async (req, res,next) => {
+router.post('/', userAccess , async (req, res,next) => {
   try {
     const newCart = await Cart.create({})
     logger.info('Nuevo carrito creado:', newCart)
@@ -22,7 +22,7 @@ router.post('/',userAccess, async (req, res,next) => {
   }
 })
 
-router.get('/:cid', userAccess, async (req, res,next) => {
+router.get('/:cid', userAccess , async (req, res,next) => {
   try {
       const cart = await Cart.findById(req.params.cid).populate('productos.product');
       res.status(200).render('carts.handlebars', {cart});
@@ -35,7 +35,7 @@ router.get('/:cid', userAccess, async (req, res,next) => {
 
 
 //agregar un producto en un carrito
-router.post('/:cartId/:productId',userAccess , async (req, res,next) => {
+router.post('/:cartId/:productId', userAccess , async (req, res,next) => {
   try {
     const cart = await Cart.findOne({ _id: req.params.cartId });
     const product = await Products.findOne({_id: req.params.productId});
@@ -45,9 +45,10 @@ router.post('/:cartId/:productId',userAccess , async (req, res,next) => {
       return new ErrorRepository('No tienes permisos para agregar productos',401)
     }
 
-    await saveProductInCar(cart, product)
+    await cartsDao.saveProduct(cart, product)
+    
     logger.info('Producto agregado con exito')
-    res.status(200).redirect(req.header('Referer'))
+    res.status(200).json('se agrego el producto con exito')
 
   } catch (error) {
     logger.error('Error al agregar producto al carrito', error)
@@ -57,12 +58,13 @@ router.post('/:cartId/:productId',userAccess , async (req, res,next) => {
 
 
 //actualizar el carrito 
-router.put('/:cid',userAccess,async (req, res,next) => {
+router.put('/:cid', userAccess ,async (req, res,next) => {
   try {
     const cart = await Cart.findById(req.params.cid);
     cart.productos = req.body.productos;
     await cart.save();
-    res.status(200).json({ message: 'Cart updated', cart });
+
+    res.status(200).json({ message: 'Carrito actualizado con exito', cart });
     logger.info('Carrito actualizado!', cart)
   } catch (error) {
     logger.error('Error actualizando cart', error)
@@ -71,16 +73,16 @@ router.put('/:cid',userAccess,async (req, res,next) => {
 });
 
 // actualizar la cantidad de ejemplares del producto 
-router.put('/:cid/products/:pid', userAccess,async (req, res,next) => {
+router.put('/:cid/products/:pid', userAccess ,async (req, res,next) => {
   try {
     const cart = await Cart.findById(req.params.cid);
     const item = cart.productos.find(item => item.product == req.params.pid);
 
-    if (!item) throw new Error('Product not found in cart');
+    if (!item) throw new Error('Producto no encontrado');
     item.quantity = req.body.quantity;
     await cart.save();
 
-    res.status(200).json({ message: 'Cart updated', cart });
+    res.status(200).json({ message: 'Carrito actualizado con exito', cart });
     logger.info('Cantidad de productos actualizada!', cart)
   } catch (error) {
     logger.error('Error actualizando cart', error)
@@ -94,7 +96,7 @@ router.post('/:cid/products/:pid', async (req, res,next) => {
     const cart = await Cart.findOne({ _id: req.params.cid });
     const productIndex = cart.productos.findIndex(item => item.product.equals(new mongoose.Types.ObjectId(req.params.pid)));
 
-    if (productIndex === -1) throw new Error('Product not found in cart');
+    if (productIndex === -1) throw new Error('Producto no encontrado');
     cart.productos.splice(productIndex, 1);
     await cart.save();
 
@@ -125,22 +127,22 @@ router.delete('/:cid', async (req, res,next) => {
 
 // Finalizar compra
 
-router.get('/:cid/purchase',userAccess , async (req, res,next) => {
+router.get('/:cid/purchase', userAccess , async (req, res,next) => {
   try {
     const cartId = req.params.cid
     const cart = await Cart.findById(cartId)
     const userEmail = req.user.email
     const code = uuid.v4()
 
-    const purchaseData = await checkDataTicket(code, userEmail, cart)
+    const purchaseData = await ticketsDao.processDataTicket(code, userEmail, cart)
     const ticket = purchaseData.ticket
     const unprocessedProducts = purchaseData.unprocessedProducts
 
     if(unprocessedProducts.length > 0){
-      res.json({"Productos sin stock suficiente no procesados": unprocessedProducts,
-                "Ticket de compra de los productos que si fueron procesados": ticket})
+      res.json({"Productos sin stock suficiente": unprocessedProducts,
+                "Ticket de compra": ticket})
     }else{
-      res.json({"Gracias por tu compra": ticket})
+      res.json({"Gracias por su compra": ticket})
     }
     logger.info('Compra realizada con exito!', cart)
   } catch (error) {

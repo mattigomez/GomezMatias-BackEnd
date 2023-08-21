@@ -1,7 +1,10 @@
 const TicketsRepository = require('../repository/tickets.repository')
 
+const ticketsDao = new TicketsRepository()
 
-async function checkDataTicket(code, userEmail, cart){
+module.exports = ticketsDao
+
+/* async function checkDataTicket(code, userEmail, cart){
   try {
     const ticketsRepository = new TicketsRepository()
     return ticketsRepository.processDataTicket(code, userEmail, cart)
@@ -10,4 +13,4 @@ async function checkDataTicket(code, userEmail, cart){
   }
 }
 
-module.exports = checkDataTicket
+module.exports = checkDataTicket */

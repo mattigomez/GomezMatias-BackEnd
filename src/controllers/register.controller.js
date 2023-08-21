@@ -10,7 +10,7 @@ router.post('/',passport.authenticate('register',{failureRedirect: 'register/fai
     const newUser = req.user
     logger.info('Se registro un nuevo usuario', newUser)
 
-    res.status(201).json({ status: 'success', message: 'Usuario registrado' });
+    res.status(201).json({ status: 'success', message: newUser });
     
   } catch (error) {
     logger.error('Error al crear usuario', error)
