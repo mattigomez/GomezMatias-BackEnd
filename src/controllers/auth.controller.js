@@ -116,7 +116,7 @@ router.get('/githubcallback', passport.authenticate('github',{failureRedirect:'/
       const dateConnection = new Date()
       await Users.findByIdAndUpdate(req.user._id, {last_connection:dateConnection})
 
-      req.session.user = req.
+      req.session.user = req.user
       req.session.save()
 
       res.redirect('/api/dbProducts?limit=9')
