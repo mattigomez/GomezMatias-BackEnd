@@ -9,7 +9,7 @@ const form = document.getElementById('loginForm')
 
     data.forEach((value, key) => (obj[key] = value))
 
-    const url = '/api/login'
+    const url = 'https://gomezmatias-backend-production-835a.up.railway.app/api/login'
     const headers = {
       'Content-type': 'application/json',
   }
@@ -37,7 +37,7 @@ function redirect(data) {
             showConfirmButton: false,
             timer: 1500,
             didClose: () => {
-              window.location.href = '/api/dbProducts?limit=9'}
+              window.location.href = 'https://gomezmatias-backend-production-835a.up.railway.app/api/dbProducts?limit=9'}
           })
       
     } else {

@@ -24,7 +24,7 @@ const router = app => {
   app.use('/api/register', registerController)
   app.use('/api/dbProducts', productsController)
   app.use('/api/dbCarts', cartsController)
-  app.use('/api/users', usersController)
+  app.use('/api/user', usersController)
   app.use('/api/adminUsers', adminUsers)
   app.use('/api/messages', messagesController)
   app.use('/api/loggerTest', loggerController )

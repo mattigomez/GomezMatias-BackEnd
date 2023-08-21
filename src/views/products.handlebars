@@ -17,7 +17,7 @@
 
 <h1>Productos</h1>
 <div class="cntainer">
-  <a href="{{prevLink}}">⬅️</a>
+  <a href="{{prevLink}}">Prev page</a>
   <ul class="productsContain">
     {{#each products}}
       <li>
@@ -29,13 +29,13 @@
         {{#if ../cartId}}
         <form id="addToCartForm" method="POST" action="/api/dbCarts/{{../cartId}}/{{this._id}}">
           <input type="hidden" name="product_id" value="{{_id}}">
-          <button id="addToCartButton" type="submit">add to 🛒</button>
+          <button id="addToCartButton" type="submit">add to cart</button>
         </form>
         {{/if}}
       </li>
     {{/each}}
   </ul>
-  <a href="{{nextLink}}">➡️</a>
+  <a href="{{nextLink}}">Next page</a>
 </div>
 
 <script src="/js/products.js"></script>
