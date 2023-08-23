@@ -83,7 +83,7 @@ router.get('/premium/:uid', async (req, res, next) => {
 
   // eliminar usuarios inactivos
 
-  router.delete('/',async (req, res, next) => {
+  router.delete('/', adminAccess ,async (req, res, next) => {
     try {
 
     // timeInactive = 1dia

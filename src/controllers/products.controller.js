@@ -43,16 +43,16 @@ router.get('/mockingProducts', userAccess , async (req, res, next) => {
 })
 
 //agregar nuevo producto
-router.post('/'/* , adminAccess */ , async (req, res, next) => {
+router.post('/', adminAccess , async (req, res, next) => {
   try {
-   /*  if(req.session.user.role !== 'premium' && req.session.user.role !== 'administrador'){
+    if(req.session.user.role !== 'premium' && req.session.user.role !== 'administrador'){
     throw new ErrorRepository('Rol de usuario rechazado', 401)
     }
     if(req.body.owner === null){
       req.body.owner === 'administrador'
     }
 
-    req.body.owner = req.session.user.email */
+    req.body.owner = req.session.user.email
     const newProduct = await Products.create(req.body)
     
     logger.info('Se agrego un producto a la db', newProduct)
@@ -68,11 +68,7 @@ router.post('/'/* , adminAccess */ , async (req, res, next) => {
 router.put('/:productId', adminAccess , async (req, res, next) => {
    try {
     const product = await Products.findById(req.params.productId)
-    //const user = req.session.user
-
-    const user = {
-      role: 'administrador', // Establecemos el rol como administrador para probar funcionalidad 
-    }
+    const user = req.session.user
 
     if (user.role === 'administrador' || (user.email !== 'premium' && product.owner !== 'premium')) {
       
@@ -88,15 +84,10 @@ router.put('/:productId', adminAccess , async (req, res, next) => {
   }
 })
 
-router.delete('/:productId'/* , adminAccess */ , async (req, res, next) => {
+router.delete('/:productId', adminAccess , async (req, res, next) => {
   try {
     const product = await Products.findById(req.params.productId)
-    // const user = req.session.user
-
-    const user = {
-      role: 'premium', // Establecemos el rol como "premium"
-      email: 'gomezmati@hotmail.com' 
-    };
+    const user = req.session.user
     
     if(user.role === 'premium'){
       const mailOptions = {
