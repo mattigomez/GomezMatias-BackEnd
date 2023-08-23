@@ -39,14 +39,11 @@ class ProductsRepository {
       const hasPrevPage = products.hasPrevPage;
       const hasNextPage = products.hasNextPage;
 
-//ver railway !!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-
       const prevLink = hasPrevPage
-        ? `http://${req.headers.host}/api/dbProducts?page=${prevPage}&limit=${limit}&sort=${sort}&query=${query}`
+        ? `https://gomezmatias-backend-production-835a.up.railway.app//api/dbProducts?page=${prevPage}&limit=${limit}&sort=${sort}&query=${query}`
         : null;
       const nextLink = hasNextPage
-        ? `http://${req.headers.host}/api/dbProducts?page=${nextPage}&limit=${limit}&sort=${sort}&query=${query}`
+        ? `https://gomezmatias-backend-production-835a.up.railway.app//api/dbProducts?page=${nextPage}&limit=${limit}&sort=${sort}&query=${query}`
         : null;
 
       
