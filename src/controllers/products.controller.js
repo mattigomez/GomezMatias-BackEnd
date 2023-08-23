@@ -65,7 +65,7 @@ router.post('/'/* , adminAccess */ , async (req, res, next) => {
 })
 
 //actualizar un producto
-router.put('/:productId'/* , adminAccess */ , async (req, res, next) => {
+router.put('/:productId', adminAccess , async (req, res, next) => {
    try {
     const product = await Products.findById(req.params.productId)
     //const user = req.session.user
