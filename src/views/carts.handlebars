@@ -15,11 +15,12 @@
     <ul>
       {{#each cart.productos}}
       <li>
+        <p>{{this.product.name}}</p>
         <img src="{{this.product.img}}">
         Cantidad: {{this.quantity}}
         <form id="delProd" method="POST" action="/api/dbCarts/{{../cart._id}}/products/{{this.product._id}}">
           <input type="hidden" name="product_id" value="{{_id}}">
-          <button id="delProdButton" type="submit">❌</button>
+          <button id="delProdButton" type="submit">Eliminar producto</button>
         </form>
       </li>
       {{/each}}

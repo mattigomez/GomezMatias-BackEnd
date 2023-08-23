@@ -2,7 +2,6 @@ const {Router} = require('express')
 const Users = require('../dao/models/Users.model')
 const UserDTO = require('../DTO/users.dto')
 const ErrorRepository = require('../repository/errors.repository')
-const moment = require ('moment')
 const userDao = require('../dao/users.dao')
 const logger = require('../utils/logger.util')
 const multerUpload = require('../config/multer.config')
@@ -14,10 +13,9 @@ const router = Router()
 
 router.get('/',async (req, res, next) =>{
   try {
-    const users = await Users.find()
-    const usersDTO = users.map(user => new UserDTO(user))
+    const users = await userDao.getUsers()
     
-    res.status(200).json(usersDTO)
+    res.status(200).json(users)
   } catch (error) {
     next(error)
   }
@@ -82,15 +80,19 @@ router.get('/premium/:uid', async (req, res, next) => {
     }
   })
  
+
+  // eliminar usuarios inactivos
+
   router.delete('/',async (req, res, next) => {
     try {
-      const inactiveThreshold = moment().subtract(30, 'minutes'); // Cambia a 2 días en producción
 
-      const inactiveUsers = await Users.find({
-      last_conection: { $lt: inactiveThreshold.toISOString() },
-    })
+    // timeInactive = 1dia
+    const timeInactive = 86400000 
+    const time = new Date()
+     // Encuentra los usuarios inactivos que no se han conectado en el ultimo día
+    const users = await Users.find({last_connection:{ $lt: new Date(time - timeInactive)}})
 
-    for (const user of inactiveUsers) {
+    for (const user of users) {
       // Enviar correo al usuario
       const mailOptions = {
         from: 'Administrador del ecommerce',

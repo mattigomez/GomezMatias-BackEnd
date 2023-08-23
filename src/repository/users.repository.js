@@ -4,6 +4,7 @@ const Cart = require('../dao/models/Carts.model')
 const { admin_email, admin_password } = require('../config/admin.config')
 const ErrorRepository = require('../repository/errors.repository')
 const logger = require('../utils/logger.util')
+const UserDTO = require ('../DTO/users.dto')
 
 class UserRepository {
 
@@ -46,10 +47,21 @@ class UserRepository {
       throw new ErrorRepository('Error al crear el usuario', 500)
     }}
 
+
+    async getUsers(){
+      try {
+        const users = await Users.find()
+        const usersDTO = users.map(user => new UserDTO(user))
+        return usersDTO
+      
+    } catch (error) {
+      throw new ErrorRepository('Error al cargar usuarios')
+    }}
+
     async deleteInactiveUsers(){
       try{
-      // timeInactive = 2 dias a milisegundos 
-      const timeInactive = 172800000
+      // timeInactive = 15 min
+      const timeInactive = 900000
       const time = new Date()
        // Encuentra los usuarios inactivos que no se han conectado en los últimos 2 días
       const users = await Users.find({last_connection:{ $lt: new Date(time - timeInactive)}})
